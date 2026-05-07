@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Join HorLux Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    <style>
+        body {
+            background: var(--bg-section);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            transition: background-color 0.4s ease;
+            position: relative;
+        }
+
+        .auth-controls {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            display: flex;
+            gap: 1rem;
+            z-index: 100;
+        }
+
+        .auth-controls .rtl-toggle,
+        .auth-controls .theme-toggle {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-heading);
+            padding: 0.8rem;
+            border-radius: 12px;
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-smooth);
+            box-shadow: var(--card-shadow);
+        }
+
+        .auth-controls button:hover {
+            background: var(--primary-gold);
+            color: white;
+            border-color: var(--primary-gold);
+            transform: translateY(-3px);
+        }
+
+        .auth-container {
+            width: 100%;
+            max-width: 600px;
+            background: var(--bg-card);
+            border-radius: 30px;
+            padding: 3.5rem;
+            box-shadow: var(--card-shadow);
+            position: relative;
+            transition: background-color 0.4s ease;
+            z-index: 10;
+        }
+
+        .auth-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .auth-form-group { margin-bottom: 1.2rem; }
+        .auth-input {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            background: var(--bg-section);
+            color: var(--text-main);
+            transition: var(--transition-smooth);
+            font-size: 0.95rem;
+        }
+        .auth-input:focus {
+            outline: none;
+            border-color: var(--primary-gold);
+            background: var(--bg-card);
+        }
+        
+        .social-login {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .social-btn {
+            flex: 1;
+            padding: 0.8rem;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            background: var(--bg-card);
+            color: var(--text-main);
+            transition: var(--transition-smooth);
+        }
+        .social-btn:hover { 
+            background: var(--text-heading);
+            color: var(--bg-card);
+            border-color: var(--text-heading);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .floating-shape {
+            position: fixed;
+            width: 150px; height: 150px;
+            background: var(--primary-gold);
+            opacity: 0.05;
+            border-radius: 50%;
+            animation: float 15s infinite ease-in-out;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -50px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
+        }
+
+        @media (max-width: 640px) {
+            body { padding: 80px 15px 40px; }
+            .auth-container { padding: 2rem 1.2rem; border-radius: 20px; }
+            .auth-controls { top: 1rem; right: 1rem; }
+            .social-login { flex-direction: column; }
+            .name-grid { grid-template-columns: 1fr !important; }
+        }
+
+        /* RTL Specifics */
+        [dir="rtl"] .auth-controls { right: auto; left: 2rem; }
+        [dir="rtl"] .auth-form-group i { left: 1.5rem; right: auto; }
+    </style>
+</head>
+<body>
+
+    <div class="auth-controls">
+        <button class="rtl-toggle">RTL</button>
+        <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+    </div>
+
+    <div class="floating-shape" style="top: 10%; right: 5%;"></div>
+    <div class="floating-shape" style="bottom: 5%; left: 2%; width: 200px; height: 200px;"></div>
+
+    <div class="auth-container fade-in">
+        <div class="auth-content">
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <a href="../index.html">
+                    <div class="logo">
+                        <div class="logo-icon"><i class="fas fa-clock"></i></div>
+                        <span style="color: var(--text-heading);">HorLux</span>
+                    </div>
+                </a>
+            </div>
+            
+            <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--text-heading); text-align: center;">Create Account</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem; text-align: center;">Start your journey in professional horology.</p>
+            
+            <form>
+                <div class="auth-form-group">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem; color: var(--text-heading);">First Name</label>
+                    <input type="text" class="auth-input" placeholder="John" required>
+                </div>
+                <div class="auth-form-group">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem; color: var(--text-heading);">Last Name</label>
+                    <input type="text" class="auth-input" placeholder="Doe" required>
+                </div>
+
+                <div class="auth-form-group">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem; color: var(--text-heading);">Email Address</label>
+                    <input type="email" class="auth-input" placeholder="student@horology.com" required>
+                </div>
+
+                <div class="auth-form-group" style="position: relative;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem; color: var(--text-heading);">Password</label>
+                    <input type="password" class="auth-input" id="password" placeholder="••••••••" required>
+                    <i class="fas fa-eye" id="togglePassword" style="position: absolute; right: 1.5rem; bottom: 1rem; cursor: pointer; color: var(--text-muted);"></i>
+                </div>
+                
+                <div style="margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--text-main);">
+                    <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                        <input type="checkbox" style="margin-top: 4px;" required> 
+                        <span>I agree to the <a href="#" style="color: var(--primary-gold); font-weight: 600;">Terms of Service</a> and <a href="#" style="color: var(--primary-gold); font-weight: 600;">Privacy Policy</a>.</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 12px; padding: 1.1rem;">Begin Application</button>
+            </form>
+            
+            <div style="text-align: center; margin: 1.5rem 0; position: relative;">
+                <hr style="border: 0; border-top: 1px solid var(--border-color);">
+                <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--bg-card); padding: 0 1rem; color: var(--text-muted); font-size: 0.8rem;">OR JOIN WITH</span>
+            </div>
+
+            <div class="social-login">
+                <div class="social-btn"><i class="fab fa-google"></i> Google</div>
+                <div class="social-btn"><i class="fab fa-apple"></i> Apple</div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 2rem; font-size: 0.95rem; color: var(--text-main);">
+                Already have an account? <a href="login.html" style="color: var(--primary-gold); font-weight: 700;">Login here</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Password Toggle
+        const togglePassword = document.querySelector('#togglePassword');
+        const passwordField = document.querySelector('#password');
+
+        if (togglePassword) {
+            togglePassword.addEventListener('click', function () {
+                const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordField.setAttribute('type', type);
+                this.classList.toggle('fa-eye-slash');
+            });
+        }
+    </script>
+</body>
+</html>

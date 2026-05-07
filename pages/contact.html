@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | HorLux Geneva</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-clock"></i></div>
+                <span>HorLux</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="../index.html" class="nav-link">Home 1</a>
+                <a href="home-2.html" class="nav-link">Home 2</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="workshops.html" class="nav-link">Workshops</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="rtl-toggle">RTL</button>
+                <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+                <a href="login.html" class="login-btn">Login</a>
+                <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="height: 60vh;">
+        <img src="../assets/images/hero-contact.png" alt="Contact Hero" class="hero-bg">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <span class="hero-tagline">Get in Touch</span>
+                <h1 class="hero-title">Connect with <br>the Academy</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Cards -->
+    <section class="contact-info">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem;">
+                <div data-reveal style="background: white; padding: 3rem; border-radius: 20px; box-shadow: var(--card-shadow); text-align: center; border: 1px solid #eee;">
+                    <div style="width: 70px; height: 70px; background: var(--bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--primary-gold); font-size: 1.5rem;">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h4 style="margin-bottom: 1rem;">Visit Us</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">122 Rue du Rhone,<br>Geneva, Switzerland</p>
+                </div>
+                <div data-reveal style="background: white; padding: 3rem; border-radius: 20px; box-shadow: var(--card-shadow); text-align: center; border: 1px solid #eee;">
+                    <div style="width: 70px; height: 70px; background: var(--bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--primary-gold); font-size: 1.5rem;">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h4 style="margin-bottom: 1rem;">Call Us</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">+41 22 555 0123<br>Mon - Fri, 9am - 6pm</p>
+                </div>
+                <div data-reveal style="background: white; padding: 3rem; border-radius: 20px; box-shadow: var(--card-shadow); text-align: center; border: 1px solid #eee;">
+                    <div style="width: 70px; height: 70px; background: var(--bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--primary-gold); font-size: 1.5rem;">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <h4 style="margin-bottom: 1rem;">Email Us</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">info@horologyacademy.com<br>admissions@horologyacademy.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inquiry Form & Map -->
+    <section class="inquiry-section" style="background: var(--bg-light);">
+        <div class="container">
+            <div style="display: flex; flex-direction: column; gap: 4rem;">
+                <div data-reveal style="background: var(--bg-card); padding: 4rem; border-radius: 30px; box-shadow: var(--card-shadow); border: 1px solid var(--border-color);">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Send an Inquiry</h2>
+                    <form>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                            <div>
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Name</label>
+                                <input type="text" style="width: 100%;" placeholder="Full Name">
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email</label>
+                                <input type="email" style="width: 100%;" placeholder="Email Address">
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Subject</label>
+                            <input type="text" style="width: 100%;" placeholder="What are you interested in?">
+                        </div>
+                        <div style="margin-bottom: 2rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Message</label>
+                            <textarea style="width: 100%;" rows="6" placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+                
+                <div data-reveal class="slide-right">
+                    <div style="height: 450px; background: #eee; border-radius: 30px; overflow: hidden; position: relative; border: 1px solid var(--border-color);">
+                        <!-- Placeholder for Map -->
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('../assets/images/hero-contact.png') center/cover; filter: grayscale(1); opacity: 0.5;"></div>
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 1;">
+                            <i class="fas fa-map-marker-alt" style="font-size: 3rem; color: var(--primary-gold);"></i>
+                            <h4 style="margin-top: 1rem;">Map Integration</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted);">Geneva Campus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media & Newsletter -->
+    <section class="newsletter-section" style="padding: 100px 0;">
+        <div class="container">
+            <div class="newsletter-flex" style="background: var(--primary-black); color: white; border-radius: 30px; padding: 5rem; display: flex; justify-content: space-between; align-items: center;">
+                <div style="max-width: 500px;">
+                    <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1rem;">The Watchmaker's Journal</h2>
+                    <p style="color: rgba(255,255,255,0.7);">Subscribe to our monthly newsletter for horology insights, academy news, and student spotlights.</p>
+                </div>
+                <div style="flex: 1; max-width: 400px; margin-left: 5rem;">
+                    <form style="display: flex; gap: 1rem;">
+                        <input type="email" style="flex: 1; padding: 1rem; border-radius: 10px; border: none;" placeholder="Email address">
+                        <button type="submit" class="btn btn-primary" style="padding: 1rem 2rem;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo footer-logo" style="color: white;">
+                        <div class="logo-icon"><i class="fas fa-clock"></i></div>
+                        <span>HorLux</span>
+                    </div>
+                    <p class="footer-desc">Preserving the timeless art of mechanical watchmaking through world-class education and elite craftsmanship training.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Courses</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Mechanical Watchmaking</a></li>
+                        <li><a href="#">Precision Repair</a></li>
+                        <li><a href="#">Luxury Restoration</a></li>
+                        <li><a href="#">Swiss Engineering</a></li>
+                        <li><a href="#">Certifications</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links" style="color: rgba(255,255,255,0.6);">
+                        <li style="display: flex; gap: 10px; align-items: flex-start;"><i class="fas fa-map-marker-alt" style="color: var(--primary-gold); margin-top: 5px;"></i> 122 Rue du Rhone, Geneva, <br>Switzerland</li>
+                        <li style="display: flex; gap: 10px; align-items: center;"><i class="fas fa-phone" style="color: var(--primary-gold);"></i> +41 22 555 0123</li>
+                        <li style="display: flex; gap: 10px; align-items: center;"><i class="fas fa-envelope" style="color: var(--primary-gold);"></i> info@horologyacademy.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 HorLux. All rights reserved.</p>
+                <div style="display: flex; gap: 2rem;">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

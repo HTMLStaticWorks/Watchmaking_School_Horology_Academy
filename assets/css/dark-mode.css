@@ -1,0 +1,138 @@
+/* 
+  Dark Mode Styles
+  HorLux Luxury Horology Academy
+*/
+
+body.dark-mode {
+    --bg-body: #050505;
+    --bg-section: #0F172A;
+    --bg-card: #1E293B;
+    --bg-header: rgba(10, 10, 10, 0.85);
+    --bg-footer: #000000;
+    --text-main: #CBD5E1;
+    --text-heading: #FFFFFF;
+    --text-muted: #94A3B8;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Base element overrides for Dark Mode */
+
+body.dark-mode {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6 {
+    color: var(--text-heading);
+}
+
+/* Header Adjustments */
+body.dark-mode .header {
+    background: var(--bg-header);
+    border-bottom-color: var(--border-color);
+}
+
+body.dark-mode .nav-link,
+body.dark-mode .logo,
+body.dark-mode .theme-toggle,
+body.dark-mode .rtl-toggle {
+    color: var(--text-heading) !important;
+}
+
+body.dark-mode .header.scrolled {
+    background: rgba(0, 0, 0, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Component Adjustments */
+body.dark-mode .course-card,
+body.dark-mode .card,
+body.dark-mode .testimonial-card,
+body.dark-mode [style*="background: white"],
+body.dark-mode [style*="background: #ffffff"] {
+    background-color: var(--bg-card) !important;
+    border-color: var(--border-color) !important;
+}
+
+body.dark-mode .course-info,
+body.dark-mode .course-meta {
+    border-color: var(--border-color);
+}
+
+body.dark-mode .course-desc,
+body.dark-mode .hero-subtitle,
+body.dark-mode .hero-tagline:not(.hero-tagline-gold) {
+    color: var(--text-muted);
+}
+
+body.dark-mode .learn-more {
+    color: var(--primary-gold);
+}
+
+/* Login Button in Dark Mode */
+body.dark-mode .login-btn {
+    background: #FFFFFF;
+    color: #0A0A0A;
+}
+
+body.dark-mode .login-btn:hover {
+    background: var(--primary-gold);
+    color: #FFFFFF;
+}
+
+/* Buttons and Links */
+body.dark-mode .btn-outline {
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+}
+
+body.dark-mode .btn-outline:hover {
+    background: #FFFFFF;
+    color: #0A0A0A;
+}
+
+/* Forms */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background: #1E293B;
+    border-color: var(--border-color);
+    color: #FFFFFF;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: var(--text-muted);
+}
+
+/* Section Backgrounds */
+body.dark-mode [style*="background: var(--bg-light)"],
+body.dark-mode [style*="background: #F8F9FA"] {
+    background-color: var(--bg-section) !important;
+}
+
+/* Footer Visibility */
+body.dark-mode .footer {
+    background: #000000;
+    border-top: 1px solid var(--border-color);
+}
+
+body.dark-mode .footer-desc,
+body.dark-mode .footer-links a {
+    color: var(--text-muted);
+}
+
+body.dark-mode .footer-links a:hover {
+    color: var(--primary-gold);
+}
+
+/* Miscellaneous */
+body.dark-mode .logo-icon {
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}

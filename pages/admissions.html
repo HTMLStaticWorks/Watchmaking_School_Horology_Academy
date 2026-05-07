@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions | HorLux Application</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    <style>
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: var(--primary-gold);
+            top: 0; bottom: 0; left: 50%;
+            margin-left: -1px;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background: inherit;
+            width: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px; height: 20px;
+            right: -10px; background-color: var(--primary-white);
+            border: 4px solid var(--primary-gold);
+            top: 15px; border-radius: 50%; z-index: 1;
+        }
+        .left { left: 0; text-align: right; }
+        .right { left: 50%; }
+        .right::after { left: -10px; }
+        
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 1.5rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+        .faq-answer {
+            padding: 0 2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .faq-item.active .faq-answer {
+            padding: 0 2rem 2rem 2rem;
+            max-height: 200px;
+        }
+        .faq-item.active .fa-chevron-down {
+            transform: rotate(180deg);
+        }
+
+        .form-group { margin-bottom: 1.5rem; }
+        .form-control {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-family: inherit;
+            transition: var(--transition-smooth);
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-gold);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-clock"></i></div>
+                <span>HorLux</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="../index.html" class="nav-link">Home 1</a>
+                <a href="home-2.html" class="nav-link">Home 2</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="workshops.html" class="nav-link">Workshops</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="rtl-toggle">RTL</button>
+                <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+                <a href="login.html" class="login-btn">Login</a>
+                <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="height: 60vh;">
+        <img src="../assets/images/hero-admissions.png" alt="Admissions Hero" class="hero-bg">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <span class="hero-tagline">Enrollment 2026</span>
+                <h1 class="hero-title">Join the Next <br>Generation</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Process Timeline -->
+    <section class="admission-process">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <h2 style="font-size: 3rem;">Application Journey</h2>
+                <p style="color: var(--text-muted);">Our selection process is rigorous, ensuring only the most dedicated students enter our workshops.</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item left" data-reveal>
+                    <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: var(--card-shadow);">
+                        <h4 style="color: var(--primary-gold); margin-bottom: 0.5rem;">Step 1: Online Application</h4>
+                        <p style="font-size: 0.9rem;">Submit your personal details, academic history, and a letter of motivation.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right" data-reveal>
+                    <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: var(--card-shadow);">
+                        <h4 style="color: var(--primary-gold); margin-bottom: 0.5rem;">Step 2: Technical Assessment</h4>
+                        <p style="font-size: 0.9rem;">Complete a fine-motor skill test and basic mechanical aptitude evaluation.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left" data-reveal>
+                    <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: var(--card-shadow);">
+                        <h4 style="color: var(--primary-gold); margin-bottom: 0.5rem;">Step 3: Personal Interview</h4>
+                        <p style="font-size: 0.9rem;">Meet with our head instructors to discuss your passion for horology.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right" data-reveal>
+                    <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: var(--card-shadow);">
+                        <h4 style="color: var(--primary-gold); margin-bottom: 0.5rem;">Step 4: Enrollment Offer</h4>
+                        <p style="font-size: 0.9rem;">Receive your formal acceptance and secure your seat with a deposit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tuition & Scholarships -->
+    <section class="tuition-section" style="background: var(--bg-light);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;">
+                <div data-reveal class="slide-right">
+                    <img src="../assets/images/hero-home-2.png" alt="Investment" style="border-radius: 20px;">
+                </div>
+                <div data-reveal>
+                    <span class="hero-tagline">Financial Information</span>
+                    <h2 style="font-size: 3rem; margin-bottom: 2rem;">Invest in Your <br>Mastery</h2>
+                    <p style="margin-bottom: 2rem;">The Academy provides comprehensive toolkits (worth €5,000) to every full-time student, included in the tuition fees. We also offer merit-based scholarships covering up to 50% of annual costs.</p>
+                    <div style="display: grid; gap: 1rem; margin-bottom: 2rem;">
+                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem;">
+                            <span>Annual Tuition</span>
+                            <span style="font-weight: 700;">€15,500</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem;">
+                            <span>Toolbox & Materials</span>
+                            <span style="font-weight: 700;">Included</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem;">
+                            <span>Examination Fees</span>
+                            <span style="font-weight: 700;">€450</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary">Scholarship Requirements</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="application-form">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto; background: white; padding: 5rem; border-radius: 30px; box-shadow: var(--card-shadow); border: 1px solid #eee;">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: 3rem;">Online Application</h2>
+                    <p style="color: var(--text-muted);">Please complete all fields to start your application.</p>
+                </div>
+                
+                <form>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div class="form-group">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">First Name</label>
+                            <input type="text" class="form-control" placeholder="Enter first name">
+                        </div>
+                        <div class="form-group">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Last Name</label>
+                            <input type="text" class="form-control" placeholder="Enter last name">
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div class="form-group">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email Address</label>
+                            <input type="email" class="form-control" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="Enter phone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Desired Program</label>
+                        <select class="form-control">
+                            <option>Master Watchmaker Certification (3 Years)</option>
+                            <option>Luxury Restoration Seminar (6 Months)</option>
+                            <option>Precision Repair (1 Year)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Motivation Letter</label>
+                        <textarea class="form-control" rows="5" placeholder="Why do you want to become a watchmaker?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.5rem;">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" style="background: var(--bg-light);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <h2 style="font-size: 3rem;">Frequently Asked Questions</h2>
+            </div>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item" data-reveal>
+                    <div class="faq-question">
+                        <span>Do I need prior engineering experience?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No prior engineering experience is required for the foundation program. However, a high degree of patience, steady hands, and attention to detail are essential.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-reveal>
+                    <div class="faq-question">
+                        <span>Is there an age limit for students?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept students from age 18. There is no upper age limit, provided the candidate passes the physical dexterity assessments.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-reveal>
+                    <div class="faq-question">
+                        <span>Are the classes taught in English?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, all our international programs are conducted in English. We also offer specialized workshops in French and German.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo footer-logo" style="color: white;">
+                        <div class="logo-icon"><i class="fas fa-clock"></i></div>
+                        <span>HorLux</span>
+                    </div>
+                    <p class="footer-desc">Preserving the timeless art of mechanical watchmaking through world-class education and elite craftsmanship training.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Courses</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Mechanical Watchmaking</a></li>
+                        <li><a href="#">Precision Repair</a></li>
+                        <li><a href="#">Luxury Restoration</a></li>
+                        <li><a href="#">Swiss Engineering</a></li>
+                        <li><a href="#">Certifications</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links" style="color: rgba(255,255,255,0.6);">
+                        <li style="display: flex; gap: 10px; align-items: flex-start;"><i class="fas fa-map-marker-alt" style="color: var(--primary-gold); margin-top: 5px;"></i> 122 Rue du Rhone, Geneva, <br>Switzerland</li>
+                        <li style="display: flex; gap: 10px; align-items: center;"><i class="fas fa-phone" style="color: var(--primary-gold);"></i> +41 22 555 0123</li>
+                        <li style="display: flex; gap: 10px; align-items: center;"><i class="fas fa-envelope" style="color: var(--primary-gold);"></i> info@horologyacademy.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 HorLux. All rights reserved.</p>
+                <div style="display: flex; gap: 2rem;">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // FAQ Accordion logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

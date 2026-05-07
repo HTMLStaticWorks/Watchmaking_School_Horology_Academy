@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gallery | HorLux Collection</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 350px;
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition-smooth);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .tall {
+            grid-row: span 2;
+        }
+
+        .wide {
+            grid-column: span 2;
+        }
+
+        .video-play-overlay {
+            transition: var(--transition-smooth);
+        }
+
+        .video-container:hover .video-play-overlay {
+            background: rgba(0, 0, 0, 0.5) !important;
+        }
+
+        .video-container:hover .fa-play-circle {
+            transform: scale(1.2);
+            color: var(--primary-gold);
+        }
+
+        .fa-play-circle {
+            transition: var(--transition-smooth);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-clock"></i></div>
+                <span>HorLux</span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="../index.html" class="nav-link">Home 1</a>
+                <a href="home-2.html" class="nav-link">Home 2</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="workshops.html" class="nav-link">Workshops</a>
+                <a href="gallery.html" class="nav-link active">Gallery</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="rtl-toggle">RTL</button>
+                <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+                <a href="login.html" class="login-btn">Login</a>
+                <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="height: 60vh;">
+        <img src="../assets/images/hero-gallery.png" alt="Gallery Hero" class="hero-bg">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <span class="hero-tagline">Visual Excellence</span>
+                <h1 class="hero-title">The Art of <br>Precision</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Masonry Gallery -->
+    <section class="gallery-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <h2 style="font-size: 3rem;">Student Masterpieces</h2>
+                <p style="color: var(--text-muted); max-width: 700px; margin: 1rem auto;">A showcase of the
+                    extraordinary work produced by our students during their certification programs.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-reveal>
+                    <img src="https://images.pexels.com/photos/10436602/pexels-photo-10436602.jpeg" alt="Watch Part">
+                    <div class="gallery-overlay">
+                        <div>
+                            <h4 style="color: var(--primary-gold);">Micro-Engineered Gear</h4>
+                            <p style="font-size: 0.8rem;">Final Project - Year 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-reveal>
+                    <img src="https://images.pexels.com/photos/29298122/pexels-photo-29298122.jpeg"
+                        alt="Watch Assembly">
+                    <div class="gallery-overlay">
+                        <div>
+                            <h4 style="color: var(--primary-gold);">Caliber 3135 Assembly</h4>
+                            <p style="font-size: 0.8rem;">Precision Repair Course</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-reveal>
+                    <img src="https://images.pexels.com/photos/33684303/pexels-photo-33684303.jpeg" alt="Workshop">
+                    <div class="gallery-overlay">
+                        <div>
+                            <h4 style="color: var(--primary-gold);">Main Laboratory</h4>
+                            <p style="font-size: 0.8rem;">Afternoon Session</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-reveal>
+                    <img src="https://images.pexels.com/photos/19810841/pexels-photo-19810841.jpeg" alt="Tools">
+                    <div class="gallery-overlay">
+                        <div>
+                            <h4 style="color: var(--primary-gold);">The Master's Kit</h4>
+                            <p style="font-size: 0.8rem;">Professional Equipment</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-reveal>
+                    <img src="https://images.pexels.com/photos/33684303/pexels-photo-33684303.jpeg" alt="Watch Close Up">
+                    <div class="gallery-overlay">
+                        <div>
+                            <h4 style="color: var(--primary-gold);">Luminescent Dial Study</h4>
+                            <p style="font-size: 0.8rem;">Restoration Seminar</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-reveal>
+                    <img src="https://images.pexels.com/photos/36303024/pexels-photo-36303024.jpeg" alt="Instructor">
+                    <div class="gallery-overlay">
+                        <div>
+                            <h4 style="color: var(--primary-gold);">Mentorship</h4>
+                            <p style="font-size: 0.8rem;">Live Demonstration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Watch Showcase -->
+    <section class="watch-showcase" style="background: var(--primary-black); color: white;">
+        <div class="container">
+            <div class="split-grid">
+                <div data-reveal class="split-col-content">
+                    <span class="hero-tagline" style="color: var(--primary-gold);">The Collection</span>
+                    <h2 style="font-size: 3rem; color: white; margin-bottom: 2rem;">Museum of Horology</h2>
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 2rem;">The Academy houses a private
+                        collection of over 200 historic timepieces, spanning from the late 18th century to modern grand
+                        complications. Students have exclusive access to these pieces for study and inspiration.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                        <div
+                            style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 10px; text-align: left;">
+                            <h3 style="color: var(--primary-gold);">1780+</h3>
+                            <p style="font-size: 0.8rem;">Historic Archive</p>
+                        </div>
+                        <div
+                            style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 10px; text-align: left;">
+                            <h3 style="color: var(--primary-gold);">50+</h3>
+                            <p style="font-size: 0.8rem;">Grand Complications</p>
+                        </div>
+                    </div>
+                </div>
+                <div data-reveal class="split-col-img">
+                    <img src="../assets/images/hero-gallery.png" alt="Collection"
+                        style="border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery -->
+    <section class="video-gallery" style="background: var(--bg-light);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <h2 style="font-size: 3rem;">Academy Stories</h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <div data-reveal class="video-container" style="position: relative; border-radius: 20px; overflow: hidden; height: 250px; cursor: pointer;">
+                    <img src="../assets/images/hero-home-1.png" alt="Video"
+                        style="width: 100%; height: 100%; object-fit: cover; transition: var(--transition-smooth);">
+                    <div class="video-play-overlay"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div
+                        style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 1rem; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
+                        <p style="font-size: 0.9rem;">A Day in the Lab</p>
+                    </div>
+                </div>
+                <div data-reveal class="video-container" style="position: relative; border-radius: 20px; overflow: hidden; height: 250px; cursor: pointer;">
+                    <img src="../assets/images/workshop-preview.png" alt="Video"
+                        style="width: 100%; height: 100%; object-fit: cover; transition: var(--transition-smooth);">
+                    <div class="video-play-overlay"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div
+                        style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 1rem; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
+                        <p style="font-size: 0.9rem;">The Art of Finishing</p>
+                    </div>
+                </div>
+                <div data-reveal class="video-container" style="position: relative; border-radius: 20px; overflow: hidden; height: 250px; cursor: pointer;">
+                    <img src="../assets/images/about-img.png" alt="Video"
+                        style="width: 100%; height: 100%; object-fit: cover; transition: var(--transition-smooth);">
+                    <div class="video-play-overlay"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div
+                        style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 1rem; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
+                        <p style="font-size: 0.9rem;">Alumni Interviews</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo footer-logo" style="color: white;">
+                        <div class="logo-icon"><i class="fas fa-clock"></i></div>
+                        <span>HorLux</span>
+                    </div>
+                    <p class="footer-desc">Preserving the timeless art of mechanical watchmaking through world-class
+                        education and elite craftsmanship training.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Courses</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Mechanical Watchmaking</a></li>
+                        <li><a href="#">Precision Repair</a></li>
+                        <li><a href="#">Luxury Restoration</a></li>
+                        <li><a href="#">Swiss Engineering</a></li>
+                        <li><a href="#">Certifications</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links" style="color: rgba(255,255,255,0.6);">
+                        <li style="display: flex; gap: 10px; align-items: flex-start;"><i class="fas fa-map-marker-alt"
+                                style="color: var(--primary-gold); margin-top: 5px;"></i> 122 Rue du Rhone, Geneva,
+                            <br>Switzerland
+                        </li>
+                        <li style="display: flex; gap: 10px; align-items: center;"><i class="fas fa-phone"
+                                style="color: var(--primary-gold);"></i> +41 22 555 0123</li>
+                        <li style="display: flex; gap: 10px; align-items: center;"><i class="fas fa-envelope"
+                                style="color: var(--primary-gold);"></i> info@horologyacademy.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 HorLux. All rights reserved.</p>
+                <div style="display: flex; gap: 2rem;">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastery & Tradition | HorLux Home 2</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    <style>
+        /* Home 2 Specific Styles */
+        .hero-2 {
+            height: 100vh;
+            background: url('../assets/images/hero-home-2.png') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            padding-top: 80px;
+        }
+
+        .hero-2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+        .instructor-card:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-clock"></i></div>
+                <span>HorLux</span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="../index.html" class="nav-link">Home 1</a>
+                <a href="home-2.html" class="nav-link active">Home 2</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="workshops.html" class="nav-link">Workshops</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="rtl-toggle">RTL</button>
+                <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+                <a href="login.html" class="login-btn">Login</a>
+                <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cinematic Hero -->
+    <section class="hero-2">
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="fade-in">
+                <span class="hero-tagline">Crafting Time</span>
+                <h1 class="hero-title" style="font-size: 5.5rem;">Precision in <br>Every Heartbeat</h1>
+                <p class="hero-subtitle" style="max-width: 600px; margin: 0 auto 2.5rem;">Where heritage meets modern
+                    engineering. Join the world's most exclusive watchmaking school.</p>
+                <div class="hero-btns">
+                    <a href="courses.html" class="btn btn-primary">Discover Mastery</a>
+                    <a href="gallery.html" class="btn btn-outline">View Collection</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Instructors -->
+    <section class="instructors-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <span class="hero-tagline">The Masters</span>
+                <h2 style="font-size: 3rem;">Learn from the World's Best</h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem;">
+                <!-- Instructor 1 -->
+                <div class="instructor-card" data-reveal style="text-align: center;">
+                    <div
+                        style="width: 100%; height: 400px; border-radius: 20px; overflow: hidden; margin-bottom: 1.5rem; border: 5px solid white; box-shadow: var(--card-shadow);">
+                        <img src="../assets/images/instructor.png" alt="Master Watchmaker"
+                            style="width: 100%; height: 100%; object-fit: cover; transition: var(--transition-smooth);">
+                    </div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Jean-Pierre Roche</h3>
+                    <p
+                        style="color: var(--primary-gold); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">
+                        Head of Restoration</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 1rem;">40 years of experience
+                        with Patek Philippe and Vacheron Constantin.</p>
+                </div>
+
+                <!-- Instructor 2 -->
+                <div class="instructor-card" data-reveal style="text-align: center;">
+                    <div
+                        style="width: 100%; height: 400px; border-radius: 20px; overflow: hidden; margin-bottom: 1.5rem; border: 5px solid white; box-shadow: var(--card-shadow);">
+                        <img src="https://images.pexels.com/photos/6263146/pexels-photo-6263146.jpeg"
+                            alt="Master Watchmaker"
+                            style="width: 100%; height: 100%; object-fit: cover; transition: var(--transition-smooth); filter: grayscale(1);">
+                    </div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Isabella Moretti</h3>
+                    <p
+                        style="color: var(--primary-gold); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">
+                        Complication Specialist</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 1rem;">Expert in tourbillons and
+                        minute repeaters from the Vallée de Joux.</p>
+                </div>
+
+                <!-- Instructor 3 -->
+                <div class="instructor-card" data-reveal style="text-align: center;">
+                    <div
+                        style="width: 100%; height: 400px; border-radius: 20px; overflow: hidden; margin-bottom: 1.5rem; border: 5px solid white; box-shadow: var(--card-shadow);">
+                        <img src="https://images.pexels.com/photos/29268643/pexels-photo-29268643.jpeg"
+                            alt="Master Watchmaker"
+                            style="width: 100%; height: 100%; object-fit: cover; transition: var(--transition-smooth);">
+                    </div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Hans Zimmer</h3>
+                    <p
+                        style="color: var(--primary-gold); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">
+                        Micro-Engineering Lead</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 1rem;">Former lead engineer for
+                        Swiss movement development labs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Highlights -->
+    <section class="curriculum-highlights" style="background: var(--primary-black); color: white;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;">
+                <div data-reveal class="slide-right">
+                    <span class="hero-tagline" style="color: var(--primary-gold);">Curriculum</span>
+                    <h2 style="font-size: 3rem; color: white; margin-bottom: 2rem;">A Standard of <br>Unrivaled
+                        Excellence</h2>
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 2.5rem;">Our curriculum is designed to take
+                        you from the basics of mechanical movement to the heights of high-complication horology.</p>
+
+                    <div style="display: grid; gap: 1.5rem;">
+                        <div
+                            style="display: flex; gap: 1.5rem; background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 10px;">
+                            <div style="color: var(--primary-gold); font-size: 1.5rem;"><i
+                                    class="fas fa-microscope"></i></div>
+                            <div>
+                                <h4 style="color: white; margin-bottom: 0.5rem;">Analytical Diagnostics</h4>
+                                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">Learn to identify the most
+                                    subtle errors in mechanical systems.</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display: flex; gap: 1.5rem; background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 10px;">
+                            <div style="color: var(--primary-gold); font-size: 1.5rem;"><i class="fas fa-cogs"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: white; margin-bottom: 0.5rem;">Component Fabrication</h4>
+                                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">Hands-on training in
+                                    creating custom parts for vintage restoration.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-reveal>
+                    <img src="https://images.pexels.com/photos/28697832/pexels-photo-28697832.jpeg" alt="Curriculum"
+                        style="border-radius: 20px; filter: grayscale(0.5) contrast(1.2);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tool Showcase -->
+    <section class="tool-showcase">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <span class="hero-tagline">Instruments of Precision</span>
+                <h2 style="font-size: 3rem;">Professional Swiss Equipment</h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
+                <div data-reveal style="position: relative; overflow: hidden; border-radius: 15px; height: 300px;">
+                    <img src="../assets/images/tools.png" alt="Tools"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white;">
+                        <h4 style="color: var(--primary-gold);">Precision Tweezers</h4>
+                    </div>
+                </div>
+                <div data-reveal style="position: relative; overflow: hidden; border-radius: 15px; height: 300px;">
+                    <img src="../assets/images/hero-home-1.png" alt="Tools"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white;">
+                        <h4 style="color: var(--primary-gold);">Micro-Screwdrivers</h4>
+                    </div>
+                </div>
+                <div data-reveal style="position: relative; overflow: hidden; border-radius: 15px; height: 300px;">
+                    <img src="../assets/images/workshop-preview.png" alt="Tools"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white;">
+                        <h4 style="color: var(--primary-gold);">Timing Machines</h4>
+                    </div>
+                </div>
+                <div data-reveal style="position: relative; overflow: hidden; border-radius: 15px; height: 300px;">
+                    <img src="https://images.pexels.com/photos/6755090/pexels-photo-6755090.jpeg" alt="Tools"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white;">
+                        <h4 style="color: var(--primary-gold);">Stereo Microscopes</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Gallery -->
+    <section class="gallery-preview" style="background: var(--bg-light);">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4rem;">
+                <div>
+                    <span class="hero-tagline">Portfolio</span>
+                    <h2 style="font-size: 3rem;">Student Creations</h2>
+                </div>
+                <a href="gallery.html" class="btn btn-outline">View Full Gallery</a>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+                <div data-reveal class="slide-right">
+                    <img src="../assets/images/hero-home-2.png" alt="Gallery"
+                        style="width: 100%; height: 500px; object-fit: cover; border-radius: 20px;">
+                </div>
+                <div style="display: grid; gap: 2rem;">
+                    <img data-reveal src="../assets/images/about-img.png" alt="Gallery"
+                        style="width: 100%; height: 240px; object-fit: cover; border-radius: 20px;">
+                    <img data-reveal src="../assets/images/workshop-preview.png" alt="Gallery"
+                        style="width: 100%; height: 240px; object-fit: cover; border-radius: 20px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enrollment CTA -->
+    <section class="enroll-cta" style="padding: 150px 0;">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 style="font-size: 4rem; margin-bottom: 2rem;">Ready to Define Your <br><span
+                        style="color: var(--primary-gold);">Horological Future?</span></h2>
+                <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 3rem;">Applications are currently
+                    being accepted for the 2026 Master Horologist program. Limited to 12 students per intake.</p>
+                <div style="display: flex; gap: 2rem; justify-content: center;">
+                    <a href="admissions.html" class="btn btn-primary" style="padding: 1.5rem 4rem;">Apply Online</a>
+                    <a href="contact.html" class="btn btn-outline"
+                        style="border-color: var(--primary-black); color: var(--primary-black);">Contact Admissions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo footer-logo" style="color: white;">
+                        <div class="logo-icon"><i class="fas fa-clock"></i></div>
+                        <span>HorLux</span>
+                    </div>
+                    <p class="footer-desc">Preserving the timeless art of mechanical watchmaking through world-class
+                        education and elite craftsmanship training.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Courses</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Mechanical Watchmaking</a></li>
+                        <li><a href="#">Precision Repair</a></li>
+                        <li><a href="#">Luxury Restoration</a></li>
+                        <li><a href="#">Swiss Engineering</a></li>
+                        <li><a href="#">Certifications</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links" style="color: rgba(255,255,255,0.6);">
+                        <li style="display: flex; gap: 10px; align-items: flex-start;"><i class="fas fa-map-marker-alt"
+                                style="color: var(--primary-gold); margin-top: 5px;"></i> 122 Rue du Rhone, Geneva,
+                            <br>Switzerland
+                        </li>
+                        <li style="display: flex; gap: 10px; align-items: center;"><i class="fas fa-phone"
+                                style="color: var(--primary-gold);"></i> +41 22 555 0123</li>
+                        <li style="display: flex; gap: 10px; align-items: center;"><i class="fas fa-envelope"
+                                style="color: var(--primary-gold);"></i> info@horologyacademy.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 HorLux. All rights reserved.</p>
+                <div style="display: flex; gap: 2rem;">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
