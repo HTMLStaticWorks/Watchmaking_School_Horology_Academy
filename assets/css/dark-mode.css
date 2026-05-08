@@ -39,10 +39,13 @@ body.dark-mode .header {
 }
 
 body.dark-mode .nav-link,
-body.dark-mode .logo,
 body.dark-mode .theme-toggle,
 body.dark-mode .rtl-toggle {
     color: var(--text-heading) !important;
+}
+
+body.dark-mode .logo {
+    color: var(--primary-gold) !important;
 }
 
 body.dark-mode .header.scrolled {
@@ -60,15 +63,51 @@ body.dark-mode [style*="background: #ffffff"] {
     border-color: var(--border-color) !important;
 }
 
+body.dark-mode .hero-bg {
+    filter: brightness(0.4) !important;
+}
+
+body.dark-mode .hero-title {
+    color: #FFFFFF !important;
+}
+
 body.dark-mode .course-info,
 body.dark-mode .course-meta {
     border-color: var(--border-color);
 }
 
-body.dark-mode .course-desc,
-body.dark-mode .hero-subtitle,
-body.dark-mode .hero-tagline:not(.hero-tagline-gold) {
+body.dark-mode .course-desc {
     color: var(--text-muted);
+}
+
+/* Hero text should remain bright in both modes because background is always dark */
+body.dark-mode .hero .hero-tagline,
+body.dark-mode .hero-2 .hero-tagline,
+body.dark-mode .hero-tagline {
+    color: var(--primary-gold) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+body.dark-mode .hero-subtitle,
+body.dark-mode .counter-label {
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-tagline {
+    color: var(--primary-gold) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.counter-label {
+    color: rgba(255, 255, 255, 0.8) !important;
 }
 
 body.dark-mode .learn-more {
@@ -95,6 +134,27 @@ body.dark-mode .btn-outline {
 body.dark-mode .btn-outline:hover {
     background: #FFFFFF;
     color: #0A0A0A;
+}
+
+/* CTA Buttons - Keep high contrast on Gold background */
+body.dark-mode .btn-black {
+    background: #0A0A0A !important;
+    color: #FFFFFF !important;
+}
+
+body.dark-mode .btn-black:hover {
+    background: #FFFFFF !important;
+    color: #0A0A0A !important;
+}
+
+body.dark-mode .btn-white {
+    background: #FFFFFF !important;
+    color: #0A0A0A !important;
+}
+
+body.dark-mode .btn-white:hover {
+    background: #0A0A0A !important;
+    color: #FFFFFF !important;
 }
 
 /* Forms */

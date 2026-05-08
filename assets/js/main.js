@@ -15,47 +15,53 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Theme Toggle ---
-    const themeBtn = document.querySelector('.theme-toggle');
+    const themeBtns = document.querySelectorAll('.theme-toggle');
     const body = document.body;
 
     const applyTheme = (theme) => {
-        const icon = themeBtn.querySelector('i');
         if (theme === 'dark') {
             body.classList.add('dark-mode');
-            if (icon) icon.classList.replace('fa-moon', 'fa-sun');
+            themeBtns.forEach(btn => {
+                const icon = btn.querySelector('i');
+                if (icon) icon.classList.replace('fa-moon', 'fa-sun');
+            });
             localStorage.setItem('theme', 'dark');
         } else {
             body.classList.remove('dark-mode');
-            if (icon) icon.classList.replace('fa-sun', 'fa-moon');
+            themeBtns.forEach(btn => {
+                const icon = btn.querySelector('i');
+                if (icon) icon.classList.replace('fa-sun', 'fa-moon');
+            });
             localStorage.setItem('theme', 'light');
         }
     };
 
-    themeBtn.addEventListener('click', () => {
-        const newTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
-        applyTheme(newTheme);
+    themeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const newTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
+            applyTheme(newTheme);
+        });
     });
 
     // Check saved theme on load
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         applyTheme(savedTheme);
-    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        // Optional: Auto dark mode based on system preference
-        applyTheme('dark');
     }
 
     // --- RTL Toggle ---
-    const rtlBtn = document.querySelector('.rtl-toggle');
-    rtlBtn.addEventListener('click', () => {
-        const currentDir = document.documentElement.getAttribute('dir');
-        if (currentDir === 'rtl') {
-            document.documentElement.setAttribute('dir', 'ltr');
-            rtlBtn.textContent = 'RTL';
-        } else {
-            document.documentElement.setAttribute('dir', 'rtl');
-            rtlBtn.textContent = 'LTR';
-        }
+    const rtlBtns = document.querySelectorAll('.rtl-toggle');
+    rtlBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const currentDir = document.documentElement.getAttribute('dir');
+            if (currentDir === 'rtl') {
+                document.documentElement.setAttribute('dir', 'ltr');
+                rtlBtns.forEach(b => b.textContent = 'RTL');
+            } else {
+                document.documentElement.setAttribute('dir', 'rtl');
+                rtlBtns.forEach(b => b.textContent = 'LTR');
+            }
+        });
     });
 
     // --- Scroll Reveal Animation ---

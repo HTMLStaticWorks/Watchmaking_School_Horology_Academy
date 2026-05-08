@@ -45,13 +45,29 @@
         .left { left: 0; text-align: right; }
         .right { left: 50%; }
         .right::after { left: -10px; }
+
+        @media (max-width: 1024px) {
+            .timeline::after { left: 31px; }
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+                text-align: left;
+            }
+            .timeline-item::after {
+                left: 21px;
+                right: auto;
+            }
+            .left, .right { left: 0; }
+        }
         
         .faq-item {
             background: white;
             border-radius: 10px;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             box-shadow: var(--card-shadow);
             overflow: hidden;
+            border: 1px solid var(--border-color);
         }
         .faq-question {
             padding: 1.5rem 2rem;
@@ -60,6 +76,7 @@
             justify-content: space-between;
             align-items: center;
             font-weight: 600;
+            color: var(--text-heading);
         }
         .faq-answer {
             padding: 0 2rem;
@@ -67,7 +84,8 @@
             overflow: hidden;
             transition: var(--transition-smooth);
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
         .faq-item.active .faq-answer {
             padding: 0 2rem 2rem 2rem;
@@ -80,16 +98,18 @@
         .form-group { margin-bottom: 1.5rem; }
         .form-control {
             width: 100%;
-            padding: 1rem 1.5rem;
-            border: 1px solid #ddd;
-            border-radius: 10px;
+            padding: 1.2rem 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
             font-family: inherit;
             transition: var(--transition-smooth);
+            background: var(--bg-card);
+            color: var(--text-main);
         }
         .form-control:focus {
             outline: none;
             border-color: var(--primary-gold);
-            box-shadow: 0 0 10px rgba(212, 175, 55, 0.1);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
         }
     </style>
 </head>
@@ -293,7 +313,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <div class="logo footer-logo" style="color: white;">
+                    <div class="logo footer-logo">
                         <div class="logo-icon"><i class="fas fa-clock"></i></div>
                         <span>HorLux</span>
                     </div>

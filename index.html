@@ -45,6 +45,13 @@
                 <a href="pages/workshops.html" class="nav-link">Workshops</a>
                 <a href="pages/gallery.html" class="nav-link">Gallery</a>
                 <a href="pages/contact.html" class="nav-link">Contact</a>
+                <div class="mobile-menu-actions">
+                    <div class="menu-toggle-row">
+                        <button class="rtl-toggle">RTL</button>
+                        <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+                    </div>
+                    <a href="pages/login.html" class="login-btn">Login</a>
+                </div>
             </nav>
 
             <div class="nav-actions">
@@ -99,7 +106,7 @@
                 </div>
                 <div data-reveal class="split-col-content">
                     <span class="hero-tagline" style="color: var(--primary-gold);">Since 1998</span>
-                    <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">Legacy of Swiss Precision</h2>
+                    <h2 class="section-title-split" style="margin-bottom: 1.5rem;">Legacy of Swiss Precision</h2>
                     <p style="margin-bottom: 1.5rem; color: var(--text-muted);">Founded on the principles of mechanical
                         perfection, the Horology Academy has been at the forefront of watchmaking education for over two
                         decades. Our mission is to preserve the ancient art of horology while embracing modern
@@ -130,7 +137,7 @@
                 </div>
                 <div data-reveal class="split-col-content">
                     <span class="hero-tagline">Academy Workshops</span>
-                    <h2 style="font-size: 3rem; margin-bottom: 2rem;">The Master's <br>Workbench</h2>
+                    <h2 class="section-title-split">The Master's <br>Workbench</h2>
                     <p style="margin-bottom: 1.5rem;">Experience the precision of high-end horology in our
                         state-of-the-art workshops. Our academy provides students with authentic Swiss-made tools and
                         vintage restoration equipment.</p>
@@ -209,17 +216,17 @@
             <div class="split-grid">
                 <div data-reveal class="split-col-content">
                     <span class="hero-tagline">Global Recognition</span>
-                    <h2 style="font-size: 3rem; margin-bottom: 2rem;">Accredited <br>Excellence</h2>
+                    <h2 class="section-title-split">Accredited <br>Excellence</h2>
                     <p style="margin-bottom: 1.5rem;">Our curriculum is recognized by the world's leading luxury watch
                         brands and horological federations. We don't just teach watchmaking; we certify mastery.</p>
-                    <div style="display: flex; gap: 2rem; margin-top: 3rem;">
-                        <div style="text-align: center;">
-                            <h3 style="color: var(--primary-gold); font-size: 2.5rem;">100%</h3>
-                            <p style="font-size: 0.8rem; text-transform: uppercase;">Job Placement</p>
+                    <div class="stats-row-mobile">
+                        <div class="stat-item-mobile">
+                            <h3 class="stat-num-mobile">100%</h3>
+                            <p class="stat-label-mobile">Job Placement</p>
                         </div>
-                        <div style="text-align: center;">
-                            <h3 style="color: var(--primary-gold); font-size: 2.5rem;">25+</h3>
-                            <p style="font-size: 0.8rem; text-transform: uppercase;">Master Mentors</p>
+                        <div class="stat-item-mobile">
+                            <h3 class="stat-num-mobile">25+</h3>
+                            <p class="stat-label-mobile">Master Mentors</p>
                         </div>
                     </div>
                     <a href="pages/admissions.html" class="btn btn-primary" style="margin-top: 2rem;">Apply Now</a>
@@ -240,39 +247,31 @@
                 <h2 style="font-size: 3rem; color: white;">What Our Alumni Say</h2>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem;" class="mobile-stack">
-                <div data-reveal
-                    style="background: rgba(255,255,255,0.05); padding: 3rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
-                    <i class="fas fa-quote-left"
-                        style="font-size: 2rem; color: var(--primary-gold); margin-bottom: 1.5rem;"></i>
-                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; font-style: italic;">"The level
+            <div class="testimonial-grid">
+                <div data-reveal class="testimonial-card">
+                    <i class="fas fa-quote-left testimonial-quote-icon"></i>
+                    <p class="testimonial-text">"The level
                         of detail and precision taught at this academy is unparalleled. I graduated with the confidence
                         to work on some of the world's most complex watch movements."</p>
-                    <div style="display: flex; align-items: center; gap: 1.5rem;">
-                        <img src="assets/images/alumni_jameson_miller.png" alt="Jameson Miller"
-                            style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-gold);">
-                        <div>
-                            <h4 style="color: white; margin-bottom: 0.2rem;">Jameson Miller</h4>
-                            <p style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase;">Senior
-                                Watchmaker, Rolex</p>
+                    <div class="testimonial-author">
+                        <img src="assets/images/alumni_jameson_miller.png" alt="Jameson Miller" class="testimonial-img">
+                        <div class="testimonial-author-info">
+                            <h4 class="testimonial-name">Jameson Miller</h4>
+                            <p class="testimonial-role">Senior Watchmaker, Rolex</p>
                         </div>
                     </div>
                 </div>
 
-                <div data-reveal
-                    style="background: rgba(255,255,255,0.05); padding: 3rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
-                    <i class="fas fa-quote-left"
-                        style="font-size: 2rem; color: var(--primary-gold); margin-bottom: 1.5rem;"></i>
-                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; font-style: italic;">"A
+                <div data-reveal class="testimonial-card">
+                    <i class="fas fa-quote-left testimonial-quote-icon"></i>
+                    <p class="testimonial-text">"A
                         life-changing experience. The mentors are true masters of their craft. The academy didn't just
                         teach me a skill; it gave me a career and a passion."</p>
-                    <div style="display: flex; align-items: center; gap: 1.5rem;">
-                        <img src="assets/images/alumni_elena_kovacs.png" alt="Elena Kovacs"
-                            style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-gold);">
-                        <div>
-                            <h4 style="color: white; margin-bottom: 0.2rem;">Elena Kovacs</h4>
-                            <p style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase;">
-                                Independent Clock Restorer</p>
+                    <div class="testimonial-author">
+                        <img src="assets/images/alumni_elena_kovacs.png" alt="Elena Kovacs" class="testimonial-img">
+                        <div class="testimonial-author-info">
+                            <h4 class="testimonial-name">Elena Kovacs</h4>
+                            <p class="testimonial-role">Independent Clock Restorer</p>
                         </div>
                     </div>
                 </div>
@@ -283,27 +282,18 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <div
-                style="background: var(--primary-gold); padding: 5rem; border-radius: 30px; text-align: center; color: white; position: relative; overflow: hidden;">
-                <div style="position: relative; z-index: 1;">
-                    <h2 style="font-size: 3.5rem; margin-bottom: 1.5rem; color: white;">Begin Your Journey in Horology
-                    </h2>
-                    <p
-                        style="font-size: 1.2rem; margin-bottom: 2.5rem; opacity: 0.9; max-width: 700px; margin-left: auto; margin-right: auto;">
-                        Enrollment for the Autumn 2026 intake is now open. Limited seats available for our master
+            <div class="cta-banner">
+                <div class="cta-content">
+                    <h2 class="cta-title">Begin Your Journey in Horology</h2>
+                    <p class="cta-text">Enrollment for the Autumn 2026 intake is now open. Limited seats available for our master
                         certification programs.</p>
-                    <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-                        <a href="pages/admissions.html" class="btn"
-                            style="background: var(--primary-black); color: white; min-width: 250px;">Apply for
-                            Admissions</a>
-                        <a href="pages/contact.html" class="btn"
-                            style="background: white; color: var(--primary-black); min-width: 250px;">Request
-                            Prospectus</a>
+                    <div class="cta-btns">
+                        <a href="pages/admissions.html" class="btn btn-black">Apply for Admissions</a>
+                        <a href="pages/contact.html" class="btn btn-white">Request Prospectus</a>
                     </div>
                 </div>
                 <!-- Decorative element -->
-                <i class="fas fa-clock"
-                    style="position: absolute; right: -50px; bottom: -50px; font-size: 20rem; opacity: 0.1; color: white;"></i>
+                <i class="fas fa-clock cta-bg-icon"></i>
             </div>
         </div>
     </section>
@@ -313,7 +303,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <div class="logo footer-logo" style="color: white;">
+                    <div class="logo footer-logo">
                         <div class="logo-icon"><i class="fas fa-clock"></i></div>
                         <span>HorLux</span>
                     </div>
@@ -366,10 +356,6 @@
 
             <div class="footer-bottom">
                 <p>&copy; 2026 HorLux. All rights reserved.</p>
-                <div style="display: flex; gap: 2rem;">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                </div>
             </div>
         </div>
     </footer>

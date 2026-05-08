@@ -37,6 +37,13 @@
                 <a href="workshops.html" class="nav-link">Workshops</a>
                 <a href="gallery.html" class="nav-link">Gallery</a>
                 <a href="contact.html" class="nav-link">Contact</a>
+                <div class="mobile-menu-actions">
+                    <div class="menu-toggle-row">
+                        <button class="rtl-toggle">RTL</button>
+                        <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+                    </div>
+                    <a href="login.html" class="login-btn">Login</a>
+                </div>
             </nav>
 
             <div class="nav-actions">
@@ -49,12 +56,12 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="height: 60vh;">
-        <img src="../assets/images/hero-about.png" alt="About Hero" class="hero-bg">
+    <section class="hero">
+        <img src="../assets/images/hero-about-new.png" alt="About Hero" class="hero-bg">
         <div class="container">
             <div class="hero-content fade-in">
                 <span class="hero-tagline">Legacy & Innovation</span>
-                <h1 class="hero-title">A Tradition of <br>Excellence</h1>
+                <h1 class="hero-title section-title-split">Our Heritage of Precision</h1>
             </div>
         </div>
     </section>
@@ -65,7 +72,7 @@
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;">
                 <div data-reveal class="slide-right">
                     <span class="hero-tagline">The Beginning</span>
-                    <h2 style="font-size: 3rem; margin-bottom: 2rem;">Born in Geneva, <br>Refined by Time</h2>
+                    <h2 class="section-title-split" style="margin-bottom: 2rem;">Born in Geneva, Refined by Time</h2>
                     <p style="margin-bottom: 1.5rem;">The Horology Academy was founded in 1998 by Marcus Van Der Rohe, a
                         master watchmaker with a vision to preserve the endangered skills of mechanical restoration.
                         What started as a small workshop in the heart of Geneva has grown into a world-renowned
@@ -91,27 +98,26 @@
         <div class="container">
             <div style="text-align: center; margin-bottom: 5rem;">
                 <span class="hero-tagline" style="color: var(--primary-gold);">Our Mentors</span>
-                <h2 style="color: white; font-size: 3rem;">Master Horologists</h2>
+                <h2 class="section-title-split" style="color: white;">Master Horologists</h2>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem;">
-                <div data-reveal style="text-align: center;">
-                    <img src="../assets/images/instructor.png" alt="Instructor"
-                        style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 4px solid var(--primary-gold);">
-                    <h3 style="color: white;">Jean-Pierre Roche</h3>
-                    <p style="color: var(--primary-gold);">Head Master</p>
+            <div class="instructors-grid">
+                <div data-reveal class="instructor-card">
+                    <img src="../assets/images/instructor.png" alt="Jean-Pierre Roche" class="instructor-img">
+                    <h3 class="instructor-name">Jean-Pierre Roche</h3>
+                    <p class="instructor-role">Head Master</p>
                 </div>
-                <div data-reveal style="text-align: center;">
-                    <img src="https://images.pexels.com/photos/6263146/pexels-photo-6263146.jpeg" alt="Instructor"
-                        style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 4px solid var(--primary-gold); filter: grayscale(1);">
-                    <h3 style="color: white;">Isabella Moretti</h3>
-                    <p style="color: var(--primary-gold);">Complications Expert</p>
+                <div data-reveal class="instructor-card">
+                    <img src="https://images.pexels.com/photos/6263146/pexels-photo-6263146.jpeg" alt="Isabella Moretti"
+                        class="instructor-img">
+                    <h3 class="instructor-name">Isabella Moretti</h3>
+                    <p class="instructor-role">Complications Expert</p>
                 </div>
-                <div data-reveal style="text-align: center;">
-                    <img src="https://images.pexels.com/photos/29268643/pexels-photo-29268643.jpeg" alt="Instructor"
-                        style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 4px solid var(--primary-gold);">
-                    <h3 style="color: white;">Hans Zimmer</h3>
-                    <p style="color: var(--primary-gold);">Micro-Engineer</p>
+                <div data-reveal class="instructor-card">
+                    <img src="https://images.pexels.com/photos/29268643/pexels-photo-29268643.jpeg" alt="Hans Zimmer"
+                        class="instructor-img">
+                    <h3 class="instructor-name">Hans Zimmer</h3>
+                    <p class="instructor-role">Micro-Engineer</p>
                 </div>
             </div>
         </div>
@@ -146,7 +152,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <div class="logo footer-logo" style="color: white;">
+                    <div class="logo footer-logo">
                         <div class="logo-icon"><i class="fas fa-clock"></i></div>
                         <span>HorLux</span>
                     </div>
@@ -199,10 +205,6 @@
 
             <div class="footer-bottom">
                 <p>&copy; 2026 HorLux. All rights reserved.</p>
-                <div style="display: flex; gap: 2rem;">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                </div>
             </div>
         </div>
     </footer>

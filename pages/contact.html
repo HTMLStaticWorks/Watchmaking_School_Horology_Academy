@@ -33,6 +33,13 @@
                 <a href="workshops.html" class="nav-link">Workshops</a>
                 <a href="gallery.html" class="nav-link">Gallery</a>
                 <a href="contact.html" class="nav-link active">Contact</a>
+                <div class="mobile-menu-actions">
+                    <div class="menu-toggle-row">
+                        <button class="rtl-toggle">RTL</button>
+                        <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+                    </div>
+                    <a href="login.html" class="login-btn">Login</a>
+                </div>
             </nav>
             
             <div class="nav-actions">
@@ -59,26 +66,26 @@
     <section class="contact-info">
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem;">
-                <div data-reveal style="background: white; padding: 3rem; border-radius: 20px; box-shadow: var(--card-shadow); text-align: center; border: 1px solid #eee;">
-                    <div style="width: 70px; height: 70px; background: var(--bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--primary-gold); font-size: 1.5rem;">
+                <div data-reveal style="background: white; padding: 2rem; border-radius: 20px; box-shadow: var(--card-shadow); text-align: center; border: 1px solid #eee;">
+                    <div style="width: 60px; height: 60px; background: var(--bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.2rem; color: var(--primary-gold); font-size: 1.3rem;">
                         <i class="fas fa-map-marked-alt"></i>
                     </div>
-                    <h4 style="margin-bottom: 1rem;">Visit Us</h4>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">122 Rue du Rhone,<br>Geneva, Switzerland</p>
+                    <h4 style="margin-bottom: 0.8rem;">Visit Us</h4>
+                    <p style="color: var(--text-muted); font-size: 0.85rem;">122 Rue du Rhone,<br>Geneva, Switzerland</p>
                 </div>
-                <div data-reveal style="background: white; padding: 3rem; border-radius: 20px; box-shadow: var(--card-shadow); text-align: center; border: 1px solid #eee;">
-                    <div style="width: 70px; height: 70px; background: var(--bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--primary-gold); font-size: 1.5rem;">
+                <div data-reveal style="background: white; padding: 2rem; border-radius: 20px; box-shadow: var(--card-shadow); text-align: center; border: 1px solid #eee;">
+                    <div style="width: 60px; height: 60px; background: var(--bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.2rem; color: var(--primary-gold); font-size: 1.3rem;">
                         <i class="fas fa-phone-alt"></i>
                     </div>
-                    <h4 style="margin-bottom: 1rem;">Call Us</h4>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">+41 22 555 0123<br>Mon - Fri, 9am - 6pm</p>
+                    <h4 style="margin-bottom: 0.8rem;">Call Us</h4>
+                    <p style="color: var(--text-muted); font-size: 0.85rem;">+41 22 555 0123<br>Mon - Fri, 9am - 6pm</p>
                 </div>
-                <div data-reveal style="background: white; padding: 3rem; border-radius: 20px; box-shadow: var(--card-shadow); text-align: center; border: 1px solid #eee;">
-                    <div style="width: 70px; height: 70px; background: var(--bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--primary-gold); font-size: 1.5rem;">
+                <div data-reveal style="background: white; padding: 2rem; border-radius: 20px; box-shadow: var(--card-shadow); text-align: center; border: 1px solid #eee;">
+                    <div style="width: 60px; height: 60px; background: var(--bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.2rem; color: var(--primary-gold); font-size: 1.3rem;">
                         <i class="fas fa-envelope-open-text"></i>
                     </div>
-                    <h4 style="margin-bottom: 1rem;">Email Us</h4>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">info@horologyacademy.com<br>admissions@horologyacademy.com</p>
+                    <h4 style="margin-bottom: 0.8rem;">Email Us</h4>
+                    <p style="color: var(--text-muted); font-size: 0.85rem;">info@horologyacademy.com<br>admissions@horologyacademy.com</p>
                 </div>
             </div>
         </div>
@@ -88,7 +95,7 @@
     <section class="inquiry-section" style="background: var(--bg-light);">
         <div class="container">
             <div style="display: flex; flex-direction: column; gap: 4rem;">
-                <div data-reveal style="background: var(--bg-card); padding: 4rem; border-radius: 30px; box-shadow: var(--card-shadow); border: 1px solid var(--border-color);">
+                <div data-reveal style="background: var(--bg-card); padding: 3rem; border-radius: 30px; box-shadow: var(--card-shadow); border: 1px solid var(--border-color); max-width: 800px; margin: 0 auto; width: 100%;">
                     <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Send an Inquiry</h2>
                     <form>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
@@ -114,14 +121,15 @@
                 </div>
                 
                 <div data-reveal class="slide-right">
-                    <div style="height: 450px; background: #eee; border-radius: 30px; overflow: hidden; position: relative; border: 1px solid var(--border-color);">
-                        <!-- Placeholder for Map -->
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('../assets/images/hero-contact.png') center/cover; filter: grayscale(1); opacity: 0.5;"></div>
-                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 1;">
-                            <i class="fas fa-map-marker-alt" style="font-size: 3rem; color: var(--primary-gold);"></i>
-                            <h4 style="margin-top: 1rem;">Map Integration</h4>
-                            <p style="font-size: 0.8rem; color: var(--text-muted);">Geneva Campus</p>
-                        </div>
+                    <div style="height: 450px; background: #eee; border-radius: 30px; overflow: hidden; position: relative; border: 1px solid var(--border-color); box-shadow: var(--card-shadow);">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=122%20Rue%20du%20Rhone,%20Geneva,%20Switzerland&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; filter: grayscale(0.2) contrast(1.1);" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -131,17 +139,15 @@
     <!-- Social Media & Newsletter -->
     <section class="newsletter-section" style="padding: 100px 0;">
         <div class="container">
-            <div class="newsletter-flex" style="background: var(--primary-black); color: white; border-radius: 30px; padding: 5rem; display: flex; justify-content: space-between; align-items: center;">
-                <div style="max-width: 500px;">
-                    <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1rem;">The Watchmaker's Journal</h2>
-                    <p style="color: rgba(255,255,255,0.7);">Subscribe to our monthly newsletter for horology insights, academy news, and student spotlights.</p>
+            <div class="newsletter-banner">
+                <div class="newsletter-content">
+                    <h2 style="color: white; font-size: 3rem; margin-bottom: 1.5rem;">The Watchmaker's Journal</h2>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem;">Subscribe to our monthly newsletter for horology insights, academy news, and student spotlights.</p>
                 </div>
-                <div style="flex: 1; max-width: 400px; margin-left: 5rem;">
-                    <form style="display: flex; gap: 1rem;">
-                        <input type="email" style="flex: 1; padding: 1rem; border-radius: 10px; border: none;" placeholder="Email address">
-                        <button type="submit" class="btn btn-primary" style="padding: 1rem 2rem;">Subscribe</button>
-                    </form>
-                </div>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Email address">
+                    <button type="submit" class="btn btn-primary" style="padding: 0 2.5rem;">Subscribe</button>
+                </form>
             </div>
         </div>
     </section>
@@ -151,7 +157,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <div class="logo footer-logo" style="color: white;">
+                    <div class="logo footer-logo">
                         <div class="logo-icon"><i class="fas fa-clock"></i></div>
                         <span>HorLux</span>
                     </div>
@@ -198,10 +204,6 @@
             
             <div class="footer-bottom">
                 <p>&copy; 2026 HorLux. All rights reserved.</p>
-                <div style="display: flex; gap: 2rem;">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                </div>
             </div>
         </div>
     </footer>
