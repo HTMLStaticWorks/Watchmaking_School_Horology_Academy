@@ -390,7 +390,7 @@ body.dark-mode .rtl-toggle {
 }
 
 .hero-title {
-    font-size: 4.5rem;
+    font-size: clamp(2.5rem, 10vw, 4.5rem);
     line-height: 1.1;
     margin-bottom: 1.5rem;
     color: white; /* Force white on darkened background */
@@ -2002,7 +2002,7 @@ body.dark-mode .mobile-toggle {
     .stat-box h3 { font-size: 1.4rem !important; }
     .stat-box p { font-size: 0.75rem !important; }
 
-    .hero-title { font-size: 2.2rem !important; line-height: 1.2 !important; }
+    .hero-title { font-size: clamp(2rem, 8vw, 2.5rem) !important; line-height: 1.2 !important; }
     .hero-subtitle { font-size: 0.95rem !important; margin-bottom: 2rem; }
     .section-title-split { 
         font-size: 1.8rem !important; 
@@ -2144,7 +2144,8 @@ body.dark-mode .mobile-toggle {
     .instructor-grid-home2, 
     .curriculum-grid-home2, 
     .gallery-grid,
-    .newsletter-banner {
+    .newsletter-banner,
+    .hero-counters {
         display: flex !important;
         flex-direction: column !important;
         gap: 2.5rem !important;
@@ -2161,15 +2162,25 @@ body.dark-mode .mobile-toggle {
     .hero-btns { flex-direction: column; gap: 1rem; width: 100%; }
     
     .hero, .hero-2 { 
-        padding: 120px 0 60px !important; 
+        padding: 100px 0 50px !important; 
         text-align: center;
-        min-height: auto;
+        min-height: calc(100vh - 80px); /* Fill screen but allow for header */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero-subpage {
+        min-height: 40vh !important;
+        padding-top: 100px !important;
+        padding-bottom: 40px !important;
     }
 
     .hero-counters {
         justify-content: center;
-        gap: 2rem;
+        gap: 2.5rem !important;
         margin-top: 3rem;
+        width: 100%;
     }
 
     .counter-num { font-size: 1.8rem; }
