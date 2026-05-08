@@ -187,37 +187,29 @@
                 <h2 class="section-title-split">Professional Swiss Equipment</h2>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
-                <div data-reveal style="position: relative; overflow: hidden; border-radius: 15px; height: 300px;">
-                    <img src="../assets/images/tools.png" alt="Tools"
-                        style="width: 100%; height: 100%; object-fit: cover;">
-                    <div
-                        style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white;">
-                        <h4 style="color: var(--primary-gold);">Precision Tweezers</h4>
+            <div class="tool-grid">
+                <div data-reveal class="tool-item">
+                    <img src="../assets/images/tools.png" alt="Tools">
+                    <div class="tool-overlay">
+                        <h4 class="tool-name">Precision Tweezers</h4>
                     </div>
                 </div>
-                <div data-reveal style="position: relative; overflow: hidden; border-radius: 15px; height: 300px;">
-                    <img src="../assets/images/hero-home-1.png" alt="Tools"
-                        style="width: 100%; height: 100%; object-fit: cover;">
-                    <div
-                        style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white;">
-                        <h4 style="color: var(--primary-gold);">Micro-Screwdrivers</h4>
+                <div data-reveal class="tool-item">
+                    <img src="../assets/images/hero-home-1.png" alt="Tools">
+                    <div class="tool-overlay">
+                        <h4 class="tool-name">Micro-Screwdrivers</h4>
                     </div>
                 </div>
-                <div data-reveal style="position: relative; overflow: hidden; border-radius: 15px; height: 300px;">
-                    <img src="../assets/images/workshop-preview.png" alt="Tools"
-                        style="width: 100%; height: 100%; object-fit: cover;">
-                    <div
-                        style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white;">
-                        <h4 style="color: var(--primary-gold);">Timing Machines</h4>
+                <div data-reveal class="tool-item">
+                    <img src="../assets/images/workshop-preview.png" alt="Tools">
+                    <div class="tool-overlay">
+                        <h4 class="tool-name">Timing Machines</h4>
                     </div>
                 </div>
-                <div data-reveal style="position: relative; overflow: hidden; border-radius: 15px; height: 300px;">
-                    <img src="https://images.pexels.com/photos/6755090/pexels-photo-6755090.jpeg" alt="Tools"
-                        style="width: 100%; height: 100%; object-fit: cover;">
-                    <div
-                        style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white;">
-                        <h4 style="color: var(--primary-gold);">Stereo Microscopes</h4>
+                <div data-reveal class="tool-item">
+                    <img src="https://images.pexels.com/photos/6755090/pexels-photo-6755090.jpeg" alt="Tools">
+                    <div class="tool-overlay">
+                        <h4 class="tool-name">Stereo Microscopes</h4>
                     </div>
                 </div>
             </div>
@@ -236,12 +228,14 @@
             </div>
 
             <div class="gallery-grid-home2">
-                <div class="gallery-main-home2" data-reveal>
+                <div class="gallery-item-home2" data-reveal>
                     <img src="../assets/images/hero-home-2.png" alt="Gallery">
                 </div>
-                <div class="gallery-side-home2">
-                    <img data-reveal src="../assets/images/about-img.png" alt="Gallery">
-                    <img data-reveal src="../assets/images/workshop-preview.png" alt="Gallery">
+                <div class="gallery-item-home2" data-reveal>
+                    <img src="../assets/images/about-img.png" alt="Gallery">
+                </div>
+                <div class="gallery-item-home2" data-reveal>
+                    <img src="../assets/images/workshop-preview.png" alt="Gallery">
                 </div>
             </div>
         </div>
@@ -256,7 +250,7 @@
                     <p class="cta-text">Applications are currently being accepted for the 2026 Master Horologist program. Limited to 12 students
                         per intake.</p>
                     <div class="cta-btns">
-                        <a href="admissions.html" class="btn btn-primary">Apply Online</a>
+                        <a href="admissions.html" class="btn btn-black">Apply Online</a>
                         <a href="contact.html" class="btn btn-outline" style="border-color: white; color: white;">Contact Admissions</a>
                     </div>
                 </div>
@@ -309,7 +303,7 @@
 
                 <div>
                     <h4 class="footer-title">Contact</h4>
-                    <ul class="footer-links" style="color: rgba(255,255,255,0.6);">
+                    <ul class="footer-links">
                         <li style="display: flex; gap: 10px; align-items: flex-start;"><i class="fas fa-map-marker-alt"
                                 style="color: var(--primary-gold); margin-top: 5px;"></i> 122 Rue du Rhone, Geneva,
                             <br>Switzerland

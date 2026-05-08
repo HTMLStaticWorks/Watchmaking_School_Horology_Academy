@@ -12,6 +12,8 @@ body.dark-mode {
     --text-main: #CBD5E1;
     --text-heading: #FFFFFF;
     --text-muted: #94A3B8;
+    --text-footer: #CBD5E1;
+    --text-footer-muted: #94A3B8;
     --border-color: rgba(255, 255, 255, 0.1);
     --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
 }
@@ -179,13 +181,13 @@ body.dark-mode [style*="background: #F8F9FA"] {
 
 /* Footer Visibility */
 body.dark-mode .footer {
-    background: #000000;
+    background: var(--bg-footer);
     border-top: 1px solid var(--border-color);
 }
 
 body.dark-mode .footer-desc,
 body.dark-mode .footer-links a {
-    color: var(--text-muted);
+    color: var(--text-footer-muted);
 }
 
 body.dark-mode .footer-links a:hover {

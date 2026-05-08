@@ -55,13 +55,14 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Hero Banner -->
+    <section class="hero hero-subpage">
         <img src="../assets/images/hero-about-new.png" alt="About Hero" class="hero-bg">
         <div class="container">
             <div class="hero-content fade-in">
                 <span class="hero-tagline">Legacy & Innovation</span>
                 <h1 class="hero-title section-title-split">Our Heritage of Precision</h1>
+                <p class="hero-subtitle">Discover the story behind our world-class watchmaking academy and our unwavering commitment to mechanical perfection.</p>
             </div>
         </div>
     </section>
@@ -69,25 +70,26 @@
     <!-- Academy Story -->
     <section class="academy-story">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;">
-                <div data-reveal class="slide-right">
-                    <span class="hero-tagline">The Beginning</span>
-                    <h2 class="section-title-split" style="margin-bottom: 2rem;">Born in Geneva, Refined by Time</h2>
-                    <p style="margin-bottom: 1.5rem;">The Horology Academy was founded in 1998 by Marcus Van Der Rohe, a
-                        master watchmaker with a vision to preserve the endangered skills of mechanical restoration.
-                        What started as a small workshop in the heart of Geneva has grown into a world-renowned
-                        institution.</p>
-                    <p style="margin-bottom: 1.5rem;">Today, we stand as a bridge between the historical techniques of
-                        the 18th century and the cutting-edge micro-engineering of the modern era. Our graduates are the
-                        keepers of time, ensuring that the world's most complex mechanical hearts continue to beat.</p>
-                    <div
-                        style="background: var(--bg-light); padding: 2rem; border-radius: 15px; border-left: 5px solid var(--primary-gold);">
-                        <p style="font-style: italic;">"We don't just teach people how to fix watches; we teach them how
-                            to understand the soul of mechanical time."</p>
+            <div class="split-grid about-history-grid">
+                <div class="split-col-content">
+                    <div class="history-header" data-reveal>
+                        <span class="hero-tagline" style="color: var(--primary-gold);">The Beginning</span>
+                        <h2 class="section-title-split" style="margin-bottom: 2rem;">Born in Geneva, Refined by Time</h2>
+                    </div>
+                    <div class="history-body" data-reveal>
+                        <p style="margin-bottom: 1.5rem; color: var(--text-muted);">The Horology Academy was founded in 1998
+                            by Marcus Van Der Rohe, a master watchmaker with a vision to preserve the endangered skills of
+                            mechanical restoration. What started as a small workshop in the heart of Geneva has grown into a
+                            world-renowned institution.</p>
+                        <p style="color: var(--text-muted);">Today, we stand as a bridge between the historical techniques
+                            of the 18th century and the cutting-edge micro-engineering of the modern era. Our graduates are
+                            the keepers of time, ensuring that the world's most complex mechanical hearts continue to beat
+                            with precision.</p>
                     </div>
                 </div>
-                <div data-reveal>
-                    <img src="../assets/images/hero-home-1.png" alt="History" style="border-radius: 20px;">
+                <div data-reveal class="split-col-img">
+                    <img src="https://images.pexels.com/photos/8327524/pexels-photo-8327524.jpeg" alt="History"
+                        style="border-radius: 30px; box-shadow: var(--card-shadow);">
                 </div>
             </div>
         </div>
@@ -126,21 +128,17 @@
     <!-- Mission & Vision -->
     <section class="mission-vision">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
-                <div data-reveal
-                    style="background: white; padding: 4rem; border-radius: 30px; box-shadow: var(--card-shadow);">
-                    <div style="font-size: 3rem; color: var(--primary-gold); margin-bottom: 1.5rem;"><i
-                            class="fas fa-eye"></i></div>
-                    <h3 style="font-size: 2rem; margin-bottom: 1rem;">Our Vision</h3>
-                    <p style="color: var(--text-muted);">To be the global benchmark for horological education, where the
+            <div class="mission-grid">
+                <div data-reveal class="mission-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Our Vision</h3>
+                    <p>To be the global benchmark for horological education, where the
                         past and future of watchmaking coexist in perfect harmony.</p>
                 </div>
-                <div data-reveal
-                    style="background: white; padding: 4rem; border-radius: 30px; box-shadow: var(--card-shadow);">
-                    <div style="font-size: 3rem; color: var(--primary-gold); margin-bottom: 1.5rem;"><i
-                            class="fas fa-bullseye"></i></div>
-                    <h3 style="font-size: 2rem; margin-bottom: 1rem;">Our Mission</h3>
-                    <p style="color: var(--text-muted);">To provide elite-level training that empowers the next
+                <div data-reveal class="mission-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Our Mission</h3>
+                    <p>To provide elite-level training that empowers the next
                         generation of master watchmakers with technical precision and artistic integrity.</p>
                 </div>
             </div>
@@ -190,7 +188,7 @@
 
                 <div>
                     <h4 class="footer-title">Contact</h4>
-                    <ul class="footer-links" style="color: rgba(255,255,255,0.6);">
+                    <ul class="footer-links">
                         <li style="display: flex; gap: 10px; align-items: flex-start;"><i class="fas fa-map-marker-alt"
                                 style="color: var(--primary-gold); margin-top: 5px;"></i> 122 Rue du Rhone, Geneva,
                             <br>Switzerland

@@ -127,8 +127,8 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="height: 70vh;">
+    <!-- Hero Banner -->
+    <section class="hero hero-subpage">
         <img src="../assets/images/hero-gallery.png" alt="Gallery Hero" class="hero-bg">
         <div class="container">
             <div class="hero-content fade-in">
@@ -142,7 +142,7 @@
     <section class="gallery-section">
         <div class="container">
             <div style="text-align: center; margin-bottom: 5rem;">
-                <h2 style="font-size: 3rem;">Student Masterpieces</h2>
+                <h2 class="section-title-split">Student Masterpieces</h2>
                 <p style="color: var(--text-muted); max-width: 700px; margin: 1rem auto;">A showcase of the
                     extraordinary work produced by our students during their certification programs.</p>
             </div>
@@ -213,20 +213,18 @@
             <div class="split-grid">
                 <div data-reveal class="split-col-content">
                     <span class="hero-tagline" style="color: var(--primary-gold);">The Collection</span>
-                    <h2 style="font-size: 3rem; color: white; margin-bottom: 2rem;">Museum of Horology</h2>
+                    <h2 class="section-title-split" style="color: white; margin-bottom: 2rem;">Museum of Horology</h2>
                     <p style="color: rgba(255,255,255,0.7); margin-bottom: 2rem;">The Academy houses a private
                         collection of over 200 historic timepieces, spanning from the late 18th century to modern grand
                         complications. Students have exclusive access to these pieces for study and inspiration.</p>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-                        <div
-                            style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 10px; text-align: left;">
-                            <h3 style="color: var(--primary-gold);">1780+</h3>
-                            <p style="font-size: 0.8rem;">Historic Archive</p>
+                    <div class="gallery-stats">
+                        <div class="stat-box">
+                            <h3>1780+</h3>
+                            <p>Historic Archive</p>
                         </div>
-                        <div
-                            style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 10px; text-align: left;">
-                            <h3 style="color: var(--primary-gold);">50+</h3>
-                            <p style="font-size: 0.8rem;">Grand Complications</p>
+                        <div class="stat-box">
+                            <h3>50+</h3>
+                            <p>Grand Complications</p>
                         </div>
                     </div>
                 </div>
@@ -242,44 +240,29 @@
     <section class="video-gallery" style="background: var(--bg-light);">
         <div class="container">
             <div style="text-align: center; margin-bottom: 5rem;">
-                <h2 style="font-size: 3rem;">Academy Stories</h2>
+                <h2 class="section-title-split">Academy Stories</h2>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-                <div data-reveal class="video-container" style="position: relative; border-radius: 20px; overflow: hidden; height: 250px; cursor: pointer;">
-                    <img src="../assets/images/hero-home-1.png" alt="Video"
-                        style="width: 100%; height: 100%; object-fit: cover; transition: var(--transition-smooth);">
-                    <div class="video-play-overlay"
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
-                    <div
-                        style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 1rem; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
-                        <p style="font-size: 0.9rem;">A Day in the Lab</p>
+            <div class="video-grid">
+                <div data-reveal class="video-item">
+                    <img src="../assets/images/hero-home-1.png" alt="Video">
+                    <div class="video-overlay">
+                        <div class="play-btn"><i class="fas fa-play"></i></div>
+                        <h3 class="video-title">A Day<br>in the Lab</h3>
                     </div>
                 </div>
-                <div data-reveal class="video-container" style="position: relative; border-radius: 20px; overflow: hidden; height: 250px; cursor: pointer;">
-                    <img src="../assets/images/workshop-preview.png" alt="Video"
-                        style="width: 100%; height: 100%; object-fit: cover; transition: var(--transition-smooth);">
-                    <div class="video-play-overlay"
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
-                    <div
-                        style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 1rem; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
-                        <p style="font-size: 0.9rem;">The Art of Finishing</p>
+                <div data-reveal class="video-item">
+                    <img src="../assets/images/workshop-preview.png" alt="Video">
+                    <div class="video-overlay">
+                        <div class="play-btn"><i class="fas fa-play"></i></div>
+                        <h3 class="video-title">The Art<br>of Finishing</h3>
                     </div>
                 </div>
-                <div data-reveal class="video-container" style="position: relative; border-radius: 20px; overflow: hidden; height: 250px; cursor: pointer;">
-                    <img src="../assets/images/about-img.png" alt="Video"
-                        style="width: 100%; height: 100%; object-fit: cover; transition: var(--transition-smooth);">
-                    <div class="video-play-overlay"
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
-                    <div
-                        style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 1rem; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
-                        <p style="font-size: 0.9rem;">Alumni Interviews</p>
+                <div data-reveal class="video-item">
+                    <img src="../assets/images/about-img.png" alt="Video">
+                    <div class="video-overlay">
+                        <div class="play-btn"><i class="fas fa-play"></i></div>
+                        <h3 class="video-title">Alumni<br>Interviews</h3>
                     </div>
                 </div>
             </div>
@@ -329,7 +312,7 @@
 
                 <div>
                     <h4 class="footer-title">Contact</h4>
-                    <ul class="footer-links" style="color: rgba(255,255,255,0.6);">
+                    <ul class="footer-links">
                         <li style="display: flex; gap: 10px; align-items: flex-start;"><i class="fas fa-map-marker-alt"
                                 style="color: var(--primary-gold); margin-top: 5px;"></i> 122 Rue du Rhone, Geneva,
                             <br>Switzerland
