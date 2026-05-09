@@ -59,6 +59,7 @@ body.dark-mode .header.scrolled {
 body.dark-mode .course-card,
 body.dark-mode .card,
 body.dark-mode .testimonial-card,
+body.dark-mode .mission-card,
 body.dark-mode [style*="background: white"],
 body.dark-mode [style*="background: #ffffff"] {
     background-color: var(--bg-card) !important;

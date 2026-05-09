@@ -18,10 +18,9 @@
         body {
             background: var(--bg-section);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 20px;
+            display: grid;
+            place-items: center;
+            padding: 100px 20px;
             overflow-x: hidden;
             overflow-y: auto;
             transition: background-color 0.4s ease;
@@ -29,7 +28,7 @@
         }
 
         .auth-controls {
-            position: fixed;
+            position: absolute;
             top: 1.5rem;
             right: 1.5rem;
             display: flex;
@@ -125,7 +124,7 @@
         }
         
         .floating-shape {
-            position: fixed;
+            position: absolute;
             width: 150px; height: 150px;
             background: var(--primary-gold);
             opacity: 0.05;
