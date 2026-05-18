@@ -407,13 +407,15 @@ body.dark-mode .rtl-toggle {
 .btn-primary {
     background: var(--primary-gold);
     color: white;
+    border: 2px solid var(--primary-gold);
 }
 
 .btn-primary:hover {
-    background: white;
-    color: var(--primary-black);
+    background: var(--primary-black) !important;
+    color: white !important;
+    border-color: var(--primary-black) !important;
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .btn-outline {
@@ -430,15 +432,10 @@ body.dark-mode .rtl-toggle {
 .btn-outline:hover,
 .hero .btn-outline:hover,
 .hero-2 .btn-outline:hover {
-    background: var(--text-heading);
-    color: var(--bg-body);
+    background: var(--primary-gold) !important;
+    color: white !important;
+    border-color: var(--primary-gold) !important;
     transform: translateY(-5px);
-}
-
-.hero .btn-outline:hover,
-.hero-2 .btn-outline:hover {
-    background: white !important;
-    color: var(--primary-black) !important;
 }
 
 /* --- Form Elements --- */
@@ -458,6 +455,16 @@ input, textarea, select {
 input:focus, textarea:focus {
     outline: none;
     border-color: var(--primary-gold);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline-block !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    cursor: pointer;
 }
 
 label {
@@ -614,8 +621,13 @@ label {
     transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.course-card:hover .learn-more {
-    color: var(--primary-gold);
+.course-card:hover .learn-more,
+.learn-more:hover {
+    color: var(--primary-gold) !important;
+}
+
+.learn-more:hover i {
+    color: var(--primary-gold) !important;
 }
 
 .learn-more i {
@@ -741,6 +753,7 @@ body.dark-mode .cta-banner .btn-outline:hover {
     background: white;
     color: var(--primary-black) !important;
     min-width: 250px;
+    border: 2px solid white;
 }
 
 /* --- Testimonials --- */
@@ -810,9 +823,12 @@ body.dark-mode .cta-banner .btn-outline:hover {
     letter-spacing: 1px;
 }
 
-.btn-white:hover {
-    background: var(--primary-black);
+.btn-white:hover,
+.cta-banner .btn-white:hover,
+body.dark-mode .cta-banner .btn-white:hover {
+    background: transparent !important;
     color: white !important;
+    border-color: white !important;
     transform: translateY(-5px);
 }
 
@@ -872,7 +888,7 @@ body.dark-mode .cta-banner .btn-outline:hover {
 }
 
 .footer-links a:hover {
-    color: var(--primary-gold);
+    color: var(--primary-gold) !important;
     padding-left: 5px;
 }
 
@@ -894,8 +910,9 @@ body.dark-mode .cta-banner .btn-outline:hover {
 }
 
 .social-icon:hover {
-    background: var(--primary-gold);
-    border-color: var(--primary-gold);
+    background: var(--primary-gold) !important;
+    border-color: var(--primary-gold) !important;
+    color: var(--primary-black) !important;
 }
 
 .footer-bottom {
@@ -976,6 +993,10 @@ body.dark-mode .cta-banner .btn-outline:hover {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     font-family: 'Cormorant Garamond', serif;
+}
+
+.instructors-preview .instructor-name {
+    color: white !important;
 }
 
 .instructor-role {
@@ -1137,34 +1158,164 @@ body.dark-mode .cta-banner .btn-outline:hover {
     border-radius: 20px !important;
 }
 
-/* --- Mission & Vision --- */
-.mission-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+/* --- Corporate Mandates / Mission & Vision Redesign --- */
+.corporate-mandate {
+    background: var(--bg-section) !important;
 }
 
-.mission-card {
+.mandate-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3.5rem;
+    align-items: stretch;
+}
+
+.mandate-primary-card {
     background: white;
-    padding: 4rem;
+    padding: 4.5rem;
     border-radius: 30px;
     box-shadow: var(--card-shadow);
-    text-align: center;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.mission-card i {
-    font-size: 3rem;
+.mandate-primary-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: var(--primary-gold);
+}
+
+.mandate-badge {
+    background: rgba(212, 175, 55, 0.1);
     color: var(--primary-gold);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 2rem;
+    align-self: flex-start;
+}
+
+.mandate-primary-card h3 {
+    font-size: 2.8rem;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--text-heading);
     margin-bottom: 1.5rem;
 }
 
-.mission-card h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+.mandate-lead {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-main);
+    margin-bottom: 2.5rem;
 }
 
-.mission-card p {
+.mandate-bullet-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1.2rem;
+}
+
+.mandate-bullet-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.mandate-bullet-list li i {
+    color: var(--primary-gold);
+    font-size: 1.1rem;
+}
+
+.mandate-secondary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.mandate-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 24px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+}
+
+.mandate-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-gold);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.08);
+}
+
+.mandate-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.mandate-num {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.08);
+    font-family: 'Cormorant Garamond', serif;
+    transition: var(--transition-smooth);
+}
+
+.mandate-card:hover .mandate-num {
+    color: rgba(212, 175, 55, 0.2);
+}
+
+.mandate-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 14px;
+    color: var(--primary-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    transition: var(--transition-smooth);
+}
+
+.mandate-card:hover .mandate-icon {
+    background: var(--primary-gold);
+    color: white;
+}
+
+.mandate-card h4 {
+    font-size: 1.4rem;
+    color: var(--text-heading);
+    margin-bottom: 1rem;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.mandate-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin: 0;
 }
 
 /* --- Video Showcase --- */
@@ -1199,7 +1350,7 @@ body.dark-mode .cta-banner .btn-outline:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    background: rgba(0, 0, 0, 0.55);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1207,6 +1358,11 @@ body.dark-mode .cta-banner .btn-outline:hover {
     color: white;
     padding: 2rem;
     text-align: center;
+    transition: var(--transition-smooth);
+}
+
+.video-item:hover .video-overlay {
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .play-btn {
@@ -1230,9 +1386,10 @@ body.dark-mode .cta-banner .btn-outline:hover {
     color: white;
 }
 
-.video-title {
-    font-size: 1.8rem;
+.video-item .video-title {
+    font-size: 1.4rem !important;
     font-family: 'Cormorant Garamond', serif;
+    font-weight: 700 !important;
     line-height: 1.2;
 }
 
@@ -2060,6 +2217,16 @@ body.dark-mode .mobile-toggle {
     .video-item {
         height: 400px !important;
     }
+
+    .mandate-layout {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+    }
+    
+    .mandate-secondary-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2rem !important;
+    }
 }
 
 /* --- MOBILE SCALING (max-width: 767px) --- */
@@ -2359,13 +2526,22 @@ body.dark-mode .mobile-toggle {
         border-radius: 15px !important;
     }
 
-    .mission-grid {
+    .mandate-layout {
         grid-template-columns: 1fr !important;
         gap: 2rem !important;
     }
 
-    .mission-card {
+    .mandate-secondary-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    .mandate-primary-card {
         padding: 3rem 1.5rem !important;
+    }
+
+    .mandate-card {
+        padding: 2rem 1.5rem !important;
     }
 
     .recognition-grid {
