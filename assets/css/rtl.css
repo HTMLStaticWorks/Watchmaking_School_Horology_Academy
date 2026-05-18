@@ -7,8 +7,16 @@
     font-family: 'Amiri', serif; /* Or another premium Arabic font */
 }
 
-[dir="rtl"] .nav-menu {
-    flex-direction: row-reverse;
+@media (min-width: 1025px) {
+    [dir="rtl"] .nav-menu {
+        flex-direction: row-reverse;
+    }
+}
+
+@media (max-width: 1024px) {
+    [dir="rtl"] .nav-menu.active {
+        flex-direction: column !important;
+    }
 }
 
 [dir="rtl"] .hero-counters {

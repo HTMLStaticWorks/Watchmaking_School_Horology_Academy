@@ -207,18 +207,20 @@ body.dark-mode .mandate-card {
 }
 
 body.dark-mode .mandate-num {
-    color: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.35);
 }
 
-body.dark-mode .mandate-card:hover .mandate-num {
-    color: rgba(212, 175, 55, 0.25);
+body.dark-mode .mandate-card:hover .mandate-num,
+body.dark-mode .mandate-primary-card:hover .mandate-num {
+    color: var(--primary-gold);
 }
 
 body.dark-mode .mandate-icon {
     background: rgba(255, 255, 255, 0.03);
 }
 
-body.dark-mode .mandate-card:hover .mandate-icon {
+body.dark-mode .mandate-card:hover .mandate-icon,
+body.dark-mode .mandate-primary-card:hover .mandate-icon {
     background: var(--primary-gold);
     color: var(--primary-black) !important;
 }

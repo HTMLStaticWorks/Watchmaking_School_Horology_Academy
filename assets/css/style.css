@@ -43,7 +43,6 @@ body {
     color: var(--text-main);
     background-color: var(--bg-body);
     line-height: 1.6;
-    overflow-x: hidden;
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -416,6 +415,16 @@ body.dark-mode .rtl-toggle {
     border-color: var(--primary-black) !important;
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Hover override for primary buttons in dark sections to ensure high visibility */
+.video-showcase .btn-primary:hover,
+.hero .btn-primary:hover,
+.hero-2 .btn-primary:hover {
+    background: #FFFFFF !important;
+    color: var(--primary-black) !important;
+    border-color: #FFFFFF !important;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
 }
 
 .btn-outline {
@@ -1165,7 +1174,7 @@ body.dark-mode .cta-banner .btn-white:hover {
 
 .mandate-layout {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr;
     gap: 3.5rem;
     align-items: stretch;
 }
@@ -1176,11 +1185,35 @@ body.dark-mode .cta-banner .btn-white:hover {
     border-radius: 30px;
     box-shadow: var(--card-shadow);
     border: 1px solid var(--border-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
     position: relative;
     overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.mandate-primary-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.mandate-primary-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-gold);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.08);
+}
+
+.mandate-primary-card:hover .mandate-num {
+    color: var(--primary-gold);
+}
+
+.mandate-primary-card:hover .mandate-icon {
+    background: var(--primary-gold);
+    color: white;
 }
 
 .mandate-primary-card::before {
@@ -1246,7 +1279,7 @@ body.dark-mode .cta-banner .btn-white:hover {
 
 .mandate-secondary-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2.5rem;
 }
 
@@ -1259,6 +1292,8 @@ body.dark-mode .cta-banner .btn-white:hover {
     transition: var(--transition-smooth);
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .mandate-card:hover {
@@ -1269,21 +1304,25 @@ body.dark-mode .cta-banner .btn-white:hover {
 
 .mandate-card-header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    gap: 1.5rem;
     margin-bottom: 2rem;
+    width: 100%;
+    text-align: center;
 }
 
 .mandate-num {
     font-size: 1.5rem;
     font-weight: 700;
-    color: rgba(0, 0, 0, 0.08);
+    color: rgba(0, 0, 0, 0.35);
     font-family: 'Cormorant Garamond', serif;
     transition: var(--transition-smooth);
 }
 
 .mandate-card:hover .mandate-num {
-    color: rgba(212, 175, 55, 0.2);
+    color: var(--primary-gold);
 }
 
 .mandate-icon {
@@ -1655,9 +1694,16 @@ body.dark-mode .back-to-top {
 /* --- Contact Page --- */
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 2.5rem;
     align-items: stretch;
+}
+
+.contact-socials {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 .contact-card {
@@ -1986,9 +2032,13 @@ body.dark-mode .mobile-toggle {
 
     .contact-grid { 
         display: grid !important;
-        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
         gap: 1.5rem !important;
         align-items: stretch !important;
+    }
+    
+    .contact-socials {
+        justify-content: flex-start !important;
     }
     
     .contact-card {
@@ -2227,6 +2277,12 @@ body.dark-mode .mobile-toggle {
         grid-template-columns: 1fr 1fr !important;
         gap: 2rem !important;
     }
+
+    .mandate-primary-card {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+        padding: 3.5rem !important;
+    }
 }
 
 /* --- MOBILE SCALING (max-width: 767px) --- */
@@ -2315,6 +2371,34 @@ body.dark-mode .mobile-toggle {
     .tuition-table th, .tuition-table td {
         padding: 1rem 0 !important;
         font-size: 0.85rem !important;
+    }
+
+    /* Left-align tuition section on mobile */
+    .tuition-enrollment .split-grid > div:first-child {
+        text-align: left !important;
+        align-items: flex-start !important;
+        width: 100%;
+    }
+    .tuition-enrollment .tuition-title {
+        text-align: left !important;
+    }
+    .tuition-enrollment p {
+        text-align: left !important;
+    }
+    .tuition-enrollment .tuition-table {
+        text-align: left !important;
+    }
+    .tuition-enrollment .tuition-table th,
+    .tuition-enrollment .tuition-table td {
+        text-align: left !important;
+    }
+    .tuition-enrollment .tuition-table td:last-child {
+        text-align: right !important;
+    }
+    .tuition-enrollment .btn {
+        align-self: flex-start !important;
+        width: auto !important;
+        display: inline-flex !important;
     }
     
     .btn { 
@@ -2537,6 +2621,8 @@ body.dark-mode .mobile-toggle {
     }
 
     .mandate-primary-card {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
         padding: 3rem 1.5rem !important;
     }
 
