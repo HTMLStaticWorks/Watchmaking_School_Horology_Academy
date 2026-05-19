@@ -118,6 +118,12 @@ section {
     object-fit: cover;
 }
 
+/* About story heading — single line on desktop, wraps naturally on mobile */
+.about-story-title {
+    white-space: nowrap;
+    max-width: none !important;
+}
+
 /* Specific About Academy Banner */
 .about-banner-home .split-grid {
     grid-template-columns: 0.85fr 1.15fr;
@@ -128,6 +134,13 @@ section {
     max-height: 480px;
     width: 100%;
     object-fit: cover;
+}
+
+/* Reserve room for the gold drop shadow so it doesn't bleed into neighbours */
+.about-banner-home .split-col-img {
+    padding-bottom: 30px;
+    padding-right: 30px;
+    overflow: visible;
 }
 
 .stats-row-mobile {
@@ -2030,6 +2043,19 @@ body.dark-mode .mobile-toggle {
     .video-title { font-size: 2.2rem !important; }
     .video-preview-card { height: 400px !important; }
 
+    /* Testimonial author role — keep on one line at tablet/1024 */
+    .testimonial-role {
+        white-space: nowrap !important;
+        font-size: 0.7rem !important;
+        letter-spacing: 0.5px !important;
+    }
+    .testimonial-card {
+        padding: 2rem !important;
+    }
+    .testimonial-author {
+        gap: 1rem !important;
+    }
+
     .contact-grid { 
         display: grid !important;
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -2105,8 +2131,8 @@ body.dark-mode .mobile-toggle {
 
     .footer-grid {
         display: grid !important;
-        grid-template-columns: repeat(4, 1fr) !important;
-        gap: 2rem !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 3rem 4rem !important;
         text-align: left !important;
         align-items: start !important;
     }
@@ -2256,6 +2282,17 @@ body.dark-mode .mobile-toggle {
         height: 300px !important;
     }
 
+    /* Home 1 About Banner: remove offset gold shadow on mobile — it overflows */
+    .about-banner-home .split-col-img {
+        padding-bottom: 0 !important;
+        padding-right: 0 !important;
+        overflow: hidden !important;
+    }
+    .about-banner-home .split-col-img img {
+        box-shadow: none !important;
+        border-radius: 15px !important;
+    }
+
     /* Video Grid Stacking for Tablet */
     .video-grid {
         grid-template-columns: 1fr !important;
@@ -2306,6 +2343,14 @@ body.dark-mode .mobile-toggle {
         max-width: 280px !important; /* Force wrap into two lines */
         margin-left: auto !important;
         margin-right: auto !important;
+    }
+
+    /* About page story heading — allow wrap on mobile, no overflow */
+    .about-story-title {
+        white-space: normal !important;
+        max-width: 100% !important;
+        font-size: 1.7rem !important;
+        text-align: center !important;
     }
     .tuition-title { 
         font-size: 1.7rem !important; 
@@ -2392,7 +2437,8 @@ body.dark-mode .mobile-toggle {
     .tuition-enrollment .tuition-table td {
         text-align: left !important;
     }
-    .tuition-enrollment .tuition-table td:last-child {
+    .tuition-enrollment .tuition-table td:last-child,
+    .tuition-enrollment .tuition-table th:last-child {
         text-align: right !important;
     }
     .tuition-enrollment .btn {

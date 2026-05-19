@@ -15,20 +15,20 @@
     <link rel="stylesheet" href="../assets/css/dark-mode.css?v=2.0">
     <link rel="stylesheet" href="../assets/css/rtl.css?v=2.2">
     <style>
-        html {
-            height: 100%;
-            overflow: hidden;
+        html, body {
+            height: auto;
+            min-height: 100%;
         }
 
         body {
             background: var(--bg-section);
-            height: 100vh;
+            min-height: 100vh;
             overflow-y: auto;
             overflow-x: hidden;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             padding: 100px 20px 60px;
             transition: background-color 0.4s ease;
             position: relative;
@@ -148,10 +148,16 @@
             66% { transform: translate(-20px, 20px) rotate(240deg); }
         }
 
+        .auth-brand {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .auth-brand a { text-decoration: none; }
+
         @media (max-width: 640px) {
             body {
-                padding: 70px 15px 40px;
-                justify-content: flex-start;
+                padding: 80px 15px 40px;
                 align-items: stretch;
             }
             .auth-container {
@@ -188,16 +194,17 @@
     <div class="floating-shape" style="top: -50px; left: -50px;"></div>
     <div class="floating-shape" style="bottom: -50px; right: -50px; width: 250px; height: 250px;"></div>
 
+    <div class="auth-brand">
+        <a href="../index.html">
+            <div class="logo">
+                <div class="logo-icon"><i class="fas fa-clock"></i></div>
+                <span>HorLux</span>
+            </div>
+        </a>
+    </div>
+
     <div class="auth-container fade-in">
         <div class="auth-content">
-            <div style="display: flex; justify-content: center; margin-bottom: 2.5rem;">
-                <a href="../index.html">
-                    <div class="logo">
-                        <div class="logo-icon"><i class="fas fa-clock"></i></div>
-                        <span>HorLux</span>
-                    </div>
-                </a>
-            </div>
             
             <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--text-heading); text-align: center;">Welcome Back</h2>
             <p style="color: var(--text-muted); margin-bottom: 2.5rem; text-align: center;">Enter your details to access the portal.</p>
@@ -225,7 +232,7 @@
             
             <div style="text-align: center; margin: 2rem 0; position: relative;">
                 <hr style="border: 0; border-top: 1px solid var(--border-color);">
-                <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--bg-card); padding: 0 1rem; color: var(--text-muted); font-size: 0.8rem;">OR CONTINUE WITH</span>
+                <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--bg-card); padding: 0 1rem; color: var(--text-muted); font-size: 0.8rem; white-space: nowrap;">OR CONTINUE WITH</span>
             </div>
 
             <div class="social-login">
