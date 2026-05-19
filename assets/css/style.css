@@ -2133,7 +2133,7 @@ body.dark-mode .mobile-toggle {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 3rem 4rem !important;
-        text-align: left !important;
+        text-align: start !important;
         align-items: start !important;
     }
     
@@ -2141,7 +2141,7 @@ body.dark-mode .mobile-toggle {
     
     .footer-grid > div:first-child {
         grid-column: span 1 !important;
-        text-align: left !important;
+        text-align: start !important;
         margin-bottom: 0 !important;
     }
 
@@ -2282,14 +2282,14 @@ body.dark-mode .mobile-toggle {
         height: 300px !important;
     }
 
-    /* Home 1 About Banner: remove offset gold shadow on mobile — it overflows */
+    /* Home 1 About Banner: fix offset gold shadow so it doesn't crop */
     .about-banner-home .split-col-img {
-        padding-bottom: 0 !important;
-        padding-right: 0 !important;
-        overflow: hidden !important;
+        padding-bottom: 35px !important;
+        padding-right: 35px !important;
+        overflow: visible !important;
     }
     .about-banner-home .split-col-img img {
-        box-shadow: none !important;
+        box-shadow: 30px 30px 0 var(--primary-gold) !important;
         border-radius: 15px !important;
     }
 
@@ -2343,6 +2343,13 @@ body.dark-mode .mobile-toggle {
         max-width: 280px !important; /* Force wrap into two lines */
         margin-left: auto !important;
         margin-right: auto !important;
+    }
+
+    /* Home 1 About Banner: fix offset gold shadow so it doesn't crop */
+    .about-banner-home .split-col-img {
+        padding-bottom: 35px !important;
+        padding-right: 35px !important;
+        overflow: visible !important;
     }
 
     /* About page story heading — allow wrap on mobile, no overflow */

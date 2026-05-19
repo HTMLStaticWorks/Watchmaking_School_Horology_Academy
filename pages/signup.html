@@ -15,16 +15,11 @@
     <link rel="stylesheet" href="../assets/css/dark-mode.css?v=2.0">
     <link rel="stylesheet" href="../assets/css/rtl.css?v=2.2">
     <style>
-        html, body {
-            height: auto;
-            min-height: 100%;
-        }
+
 
         body {
             background: var(--bg-section);
             min-height: 100vh;
-            overflow-y: auto;
-            overflow-x: hidden;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -198,17 +193,16 @@
     <div class="floating-shape" style="top: 10%; right: 5%;"></div>
     <div class="floating-shape" style="bottom: 5%; left: 2%; width: 200px; height: 200px;"></div>
 
-    <div class="auth-brand">
-        <a href="../index.html">
-            <div class="logo">
-                <div class="logo-icon"><i class="fas fa-clock"></i></div>
-                <span>HorLux</span>
-            </div>
-        </a>
-    </div>
-
     <div class="auth-container fade-in">
         <div class="auth-content">
+            <div class="auth-brand">
+                <a href="../index.html">
+                    <div class="logo">
+                        <div class="logo-icon"><i class="fas fa-clock"></i></div>
+                        <span>HorLux</span>
+                    </div>
+                </a>
+            </div>
             
             <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--text-heading); text-align: center;">Create Account</h2>
             <p style="color: var(--text-muted); margin-bottom: 2rem; text-align: center;">Start your journey in professional horology.</p>
@@ -241,8 +235,8 @@
                 </div>
                 
                 <div style="margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--text-main);">
-                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; white-space: nowrap;">
-                        <input type="checkbox" style="width: 16px; height: 16px; margin: 0; flex-shrink: 0;" required> 
+                    <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer; line-height: 1.5;">
+                        <input type="checkbox" style="width: 16px; height: 16px; margin: 2px 0 0 0; flex-shrink: 0;" required> 
                         <span>I agree to the <a href="#" style="color: var(--primary-gold); font-weight: 600;">Terms of Service</a> and <a href="#" style="color: var(--primary-gold); font-weight: 600;">Privacy Policy</a>.</span>
                     </label>
                 </div>
