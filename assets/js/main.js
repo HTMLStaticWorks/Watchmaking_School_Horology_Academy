@@ -4,15 +4,36 @@
 */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Safe LocalStorage Wrapper ---
+    const safeLocalStorage = {
+        getItem(key) {
+            try {
+                return localStorage.getItem(key);
+            } catch (e) {
+                console.warn('localStorage is not available:', e);
+                return null;
+            }
+        },
+        setItem(key, value) {
+            try {
+                localStorage.setItem(key, value);
+            } catch (e) {
+                console.warn('localStorage is not available:', e);
+            }
+        }
+    };
+
     // --- Sticky Header ---
     const header = document.querySelector('.header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
 
     // --- Theme Toggle ---
     const themeBtns = document.querySelectorAll('.theme-toggle');
@@ -25,14 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 const icon = btn.querySelector('i');
                 if (icon) icon.classList.replace('fa-moon', 'fa-sun');
             });
-            localStorage.setItem('theme', 'dark');
+            safeLocalStorage.setItem('theme', 'dark');
         } else {
             body.classList.remove('dark-mode');
             themeBtns.forEach(btn => {
                 const icon = btn.querySelector('i');
                 if (icon) icon.classList.replace('fa-sun', 'fa-moon');
             });
-            localStorage.setItem('theme', 'light');
+            safeLocalStorage.setItem('theme', 'light');
         }
     };
 
@@ -44,25 +65,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Check saved theme on load
-    const savedTheme = localStorage.getItem('theme');
+    const savedTheme = safeLocalStorage.getItem('theme');
     if (savedTheme) {
         applyTheme(savedTheme);
     }
 
     // --- RTL Toggle ---
     const rtlBtns = document.querySelectorAll('.rtl-toggle');
+
+    const applyDirection = (dir) => {
+        if (dir === 'rtl') {
+            document.documentElement.setAttribute('dir', 'rtl');
+            rtlBtns.forEach(b => b.textContent = 'LTR');
+            safeLocalStorage.setItem('dir', 'rtl');
+        } else {
+            document.documentElement.setAttribute('dir', 'ltr');
+            rtlBtns.forEach(b => b.textContent = 'RTL');
+            safeLocalStorage.setItem('dir', 'ltr');
+        }
+    };
+
     rtlBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            const currentDir = document.documentElement.getAttribute('dir');
-            if (currentDir === 'rtl') {
-                document.documentElement.setAttribute('dir', 'ltr');
-                rtlBtns.forEach(b => b.textContent = 'RTL');
-            } else {
-                document.documentElement.setAttribute('dir', 'rtl');
-                rtlBtns.forEach(b => b.textContent = 'LTR');
-            }
+            const currentDir = document.documentElement.getAttribute('dir') || 'ltr';
+            const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
+            applyDirection(newDir);
         });
     });
+
+    // Check saved direction on load
+    const savedDir = safeLocalStorage.getItem('dir');
+    if (savedDir) {
+        applyDirection(savedDir);
+    }
 
     // --- Scroll Reveal Animation ---
     const revealElements = document.querySelectorAll('[data-reveal]');
@@ -109,12 +144,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (mobileToggle) {
         mobileToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            const icon = mobileToggle.querySelector('i');
-            if (navMenu.classList.contains('active')) {
-                icon.classList.replace('fa-bars', 'fa-times');
-            } else {
-                icon.classList.replace('fa-times', 'fa-bars');
+            if (navMenu) {
+                navMenu.classList.toggle('active');
+                const icon = mobileToggle.querySelector('i');
+                if (icon) {
+                    if (navMenu.classList.contains('active')) {
+                        icon.classList.replace('fa-bars', 'fa-times');
+                    } else {
+                        icon.classList.replace('fa-times', 'fa-bars');
+                    }
+                }
             }
         });
     }
@@ -122,9 +161,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Close menu when clicking a link
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
+            if (navMenu) {
+                navMenu.classList.remove('active');
+            }
             if (mobileToggle) {
-                mobileToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                const icon = mobileToggle.querySelector('i');
+                if (icon) icon.classList.replace('fa-times', 'fa-bars');
             }
         });
     });
@@ -132,10 +174,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Smooth Scrolling for Navigation ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const targetId = this.getAttribute('href');
+            if (targetId && targetId !== '#') {
+                const targetEl = document.querySelector(targetId);
+                if (targetEl) {
+                    e.preventDefault();
+                    targetEl.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            }
         });
     });
 
